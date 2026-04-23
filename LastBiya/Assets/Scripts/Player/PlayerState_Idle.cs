@@ -7,30 +7,25 @@ public class PlayerState_Idle : HFSM_BaseState<E_PlayerStateType, PlayerControll
 {
     public PlayerState_Idle()
     {
-        
+        this.parentType = E_PlayerStateType.Grounded;
     }
 
     public override void OnEnter()
     {
-        Debug.Log("进入状态：Idle");
-        base.OnEnter();
+        //Debug.Log("进入状态：Idle");
+        owner.Rb.velocity = Vector2.zero;
     }
 
 
     public override void OnUpdate()
     {
-        base.OnUpdate();
-        //if (owner.Input.MoveAction.WasPressedThisFrame())
-        //    hfsm.SwitchState(E_PlayerStateType.Move);
-        if (InputManager.Instance.MoveAction.WasPressedThisFrame())
-        {
+        if (InputManager.Instance.MoveInput.x != 0)
             hfsm.SwitchState(E_PlayerStateType.Move);
-        }
     }
 
     public override void OnExit()
     {
-        Debug.Log("退出状态：Idle");
-        base.OnExit();
+        //Debug.Log("退出状态：Idle");
+        //base.OnExit();
     }
 }

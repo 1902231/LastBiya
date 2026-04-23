@@ -34,12 +34,17 @@ public class HFSM<TKey,TOwner> where TKey : struct
     {
         if (!stateDic.ContainsKey(type)) return;
 
-        //ICA算法 顺藤摸瓜
+        // 如果目标是父状态且有默认子状态，顺着 defaultChildType 走到叶子
+        TKey finalType = type;
+        while (stateDic.TryGetValue(finalType, out var s) && s.defaultChildType.HasValue)
+        {
+            finalType = s.defaultChildType.Value;
+        }
 
         // 首次进入，没有当前状态，直接走完整进入链
         if (currentState == null)
         {
-            HFSM_BaseState<TKey, TOwner> target = stateDic[type];
+            HFSM_BaseState<TKey, TOwner> target = stateDic[finalType];
             List<HFSM_BaseState<TKey, TOwner>> enterPath = new List<HFSM_BaseState<TKey, TOwner>>();
             HFSM_BaseState<TKey, TOwner> s = target;
             while (s != null)
@@ -53,12 +58,11 @@ public class HFSM<TKey,TOwner> where TKey : struct
                 state.OnEnter();
             }
             currentState = target;
-            //paramator.currentstate = currentState;
             return;
         }
 
         //
-        HFSM_BaseState<TKey, TOwner> CommonParent = FindCommonParent(currentState,stateDic[type]);
+        HFSM_BaseState<TKey, TOwner> CommonParent = FindCommonParent(currentState, stateDic[finalType]);
 
         //
         HFSM_BaseState<TKey, TOwner> tempState = currentState;
@@ -68,8 +72,8 @@ public class HFSM<TKey,TOwner> where TKey : struct
             tempState = GetParent(tempState);
         }
 
-        // ����״̬
-        tempState = stateDic[type];
+        // 进入目标状态
+        tempState = stateDic[finalType];
         List<HFSM_BaseState<TKey, TOwner>> enterPath2 = new List<HFSM_BaseState<TKey, TOwner>>();
         while (tempState != null && tempState != CommonParent)
         { 
@@ -83,8 +87,7 @@ public class HFSM<TKey,TOwner> where TKey : struct
         }
 
         //
-        currentState = stateDic[type];
-        //paramator.currentstate = currentState;
+        currentState = stateDic[finalType];
     }
 
     public void OnUpdate()
@@ -104,6 +107,26 @@ public class HFSM<TKey,TOwner> where TKey : struct
         foreach (HFSM_BaseState<TKey, TOwner> state in chain)
         {
             state.OnUpdate();
+        }
+    }
+
+    public void OnFixedUpdate()
+    {
+        //currentState?.OnUpdate();
+
+        //查找链，使用链上所有状态的update
+        List<HFSM_BaseState<TKey, TOwner>> chain = new();
+        HFSM_BaseState<TKey, TOwner> tempState = currentState;
+        while (tempState != null)
+        {
+            chain.Add(tempState);
+            tempState = GetParent(tempState);
+        }
+        chain.Reverse();
+
+        foreach (HFSM_BaseState<TKey, TOwner> state in chain)
+        {
+            state.OnFixedUpdate();
         }
     }
 

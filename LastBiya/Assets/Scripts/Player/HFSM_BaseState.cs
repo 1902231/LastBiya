@@ -51,5 +51,6 @@ public class HFSM_BaseState<TKey,TOwner> where TKey : struct
 
     public virtual void OnEnter() { }
     public virtual void OnUpdate() { }
+    public virtual void OnFixedUpdate() { }
     public virtual void OnExit() { }
 }

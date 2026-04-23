@@ -3,6 +3,82 @@
   "WorkspaceRootPath": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_dash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_fallingdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_fallingdash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\enemy\\enemy_01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemy_01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\combat\\attackhitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\attackhitbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerability_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerability_attack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerability_doublejump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerability_doublejump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_heart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_heart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\hfsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\hfsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\combat\\damageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\damageinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_freefall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_freefall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_alive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_alive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_jump.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_grounded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_grounded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_airbornd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_airbornd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\eventcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\eventcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_idle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_idle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +87,12 @@
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\baseability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\player\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerstate_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerstate_move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\hfsm_basestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\hfsm_basestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\abilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\abilitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\hfsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\hfsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
@@ -56,114 +112,280 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HFSM.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\HFSM.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA3wIoAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T09:47:01.403Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "AbilityManager.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\AbilityManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\AbilityManager.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\AbilityManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\AbilityManager.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T05:42:14.399Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "PlayerInputHandler.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerInputHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInputHandler.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerInputHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInputHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T10:30:18.411Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InputManager.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\InputManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\InputManager.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\InputManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\InputManager.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T13:44:15.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlayerState_Move.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Move.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Move.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Move.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Move.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T12:04:48.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerState_Idle.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Idle.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Idle.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Idle.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Idle.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T10:44:00.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BaseAbility.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\BaseAbility.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\BaseAbility.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\BaseAbility.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\BaseAbility.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T05:02:54.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HFSM_BaseState.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM_BaseState.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HFSM_BaseState.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM_BaseState.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\HFSM_BaseState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-21T03:03:17.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAvwJcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T10:35:01.507Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Enemy_01.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Enemy\\Enemy_01.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_01.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Enemy\\Enemy_01.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Enemy_01.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T10:08:46.853Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttackHitbox.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\AttackHitbox.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\AttackHitbox.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\AttackHitbox.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\AttackHitbox.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAiwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T09:59:06.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DamageInfo.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\DamageInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\DamageInfo.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\DamageInfo.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\DamageInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T08:02:31.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerAbility_DoubleJump.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T06:17:53.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlayerState_Alive.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Alive.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Alive.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Alive.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Alive.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:58:34.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PlayerState_Heart.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Heart.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Heart.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Heart.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Heart.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowCYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:57:26.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerState_FallingDash.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:32:55.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PlayerState_AirBornd.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:00:27.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlayerState_Grounded.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T13:53:35.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerAbility_Attack.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:15:47.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EventCenter.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\EventCenter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EventCenter.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\EventCenter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EventCenter.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAqwIoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T05:07:56.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerState_Dash.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Dash.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Dash.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Dash.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Dash.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T03:53:56.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PlayerState_FreeFall.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T14:02:11.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PlayerState_Jump.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Jump.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Jump.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Jump.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Jump.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T13:50:01.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\InputManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InputManager.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\InputManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InputManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-22T12:28:12.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlayerState_Move.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Move.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Move.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Move.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Move.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA0wBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T12:04:48.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PlayerState_Idle.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Idle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Idle.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Idle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerState_Idle.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T10:44:00.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BaseAbility.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\BaseAbility.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\BaseAbility.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\BaseAbility.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\BaseAbility.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T05:02:54.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HFSM_BaseState.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM_BaseState.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HFSM_BaseState.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM_BaseState.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\HFSM_BaseState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T03:03:17.309Z"
             }
           ]
         }

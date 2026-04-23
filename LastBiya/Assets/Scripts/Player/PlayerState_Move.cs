@@ -1,29 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlayerState_Move : HFSM_BaseState<E_PlayerStateType ,PlayerController>
 {
     public PlayerState_Move()
     {
+        this.parentType = E_PlayerStateType.Grounded;
 
     }
 
     public override void OnEnter()
     {
-        Debug.Log("½øÈë×´Ì¬£ºWalk");
-        base.OnEnter();
+        //Debug.Log("è¿›å…¥çŠ¶æ€ï¼šMove"); 
+        
     }
 
     public override void OnUpdate()
     {
-        base.OnUpdate();
+        // æ›´æ–°æœå‘
+        owner.UpdateFacing(InputManager.Instance.MoveInput.x);
+    }
+
+    public override void OnFixedUpdate()
+    {
+        Vector2 input = InputManager.Instance.MoveInput;
+        owner.ApplyHorizontalMovement(input.x);
     }
 
 
     public override void OnExit()
     {
-        Debug.Log("ÍË³ö×´Ì¬£ºWalk");
+        //Debug.Log("é€€å‡ºçŠ¶æ€ï¼šMove");
         base.OnExit();
     }
 

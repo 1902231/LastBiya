@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,11 +20,20 @@ public class InputManager : MonoBehaviour
     // private InputActionMap uiMap;
     // private InputActionMap dialogueMap;
 
+    // —— Actions ——
     public InputAction MoveAction { get; private set; }
+    public Vector2 MoveInput => MoveAction.ReadValue<Vector2>();
     public InputAction JumpAction { get; private set; }
     public InputAction AttackAction { get; private set; }
     public InputAction DashAction { get; private set; }
+    public InputAction FallingDashAction { get; private set; }
+    public InputAction ChargeAttackAction { get; private set; }
 
+    // —— 输入缓冲 ——
+    [Header("输入缓冲")]
+    [SerializeField] private float bufferDuration = 0.15f;
+
+    private Dictionary<InputAction, float> bufferTimers = new();
 
     void Awake()
     {
@@ -44,9 +54,42 @@ public class InputManager : MonoBehaviour
         JumpAction   = playerNormalMap.FindAction("Jump");
         AttackAction = playerNormalMap.FindAction("Attack");
         DashAction   = playerNormalMap.FindAction("Dash");
+        FallingDashAction = playerNormalMap.FindAction("FallingDash");
+        ChargeAttackAction = playerNormalMap.FindAction("ChargeAttack");
+
+        // 注册需要缓冲的 Action（Move 是 Value 类型，不需要缓冲）
+        // Dash 不加缓冲，避免下冲落地后自动接普通冲刺
+        bufferTimers[JumpAction]   = 0;
+        bufferTimers[AttackAction] = 0;
+        bufferTimers[FallingDashAction] = 0;
 
         // 默认启用 PlayerNormal
         playerNormalMap.Enable();
+    }
+
+    void Update()
+    {
+        // 统一遍历：倒计时 + 检测按下
+        var keys = new List<InputAction>(bufferTimers.Keys);
+        foreach (var action in keys)
+        {
+            bufferTimers[action] -= Time.deltaTime;
+            if (action.WasPressedThisFrame())
+                bufferTimers[action] = bufferDuration;
+        }
+    }
+
+    /// <summary>
+    /// 消费指定 Action 的缓冲输入，返回 true 表示缓冲窗口内有该输入，读完自动清零
+    /// </summary>
+    public bool Consume(InputAction action)
+    {
+        if (bufferTimers.TryGetValue(action, out float timer) && timer > 0)
+        {
+            bufferTimers[action] = 0;
+            return true;
+        }
+        return false;
     }
 
     void OnDestroy()

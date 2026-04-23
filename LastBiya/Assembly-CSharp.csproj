@@ -60,15 +60,44 @@
     <Analyzer Include="E:\unityhub\2022.3.62f3c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_HurtState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState_Move.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_FreeFall.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_FallingDash.cs" />
     <Compile Include="Assets\Scripts\Player\HFSM_BaseState.cs" />
     <Compile Include="Assets\Scripts\Player\BaseAbility.cs" />
+    <Compile Include="Assets\Scripts\Text\TestClock.cs" />
     <Compile Include="Assets\Scripts\Player\HFSM.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_Jump.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_AliveState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_DoubleJump.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbility_DoubleJump.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_ChargeAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_PatrolState.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_ChaseState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbility_Dash.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_Grounded.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbility_ChargeAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_AttackState.cs" />
     <Compile Include="Assets\Scripts\Player\AbilityManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbility_Attack.cs" />
+    <Compile Include="Assets\Scripts\Text\TextClock.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01_DeadState.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerAbility_FallingDash.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy_01.cs" />
+    <Compile Include="Assets\Scripts\Combat\AttackHitbox.cs" />
+    <Compile Include="Assets\Scripts\Combat\DamageInfo.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_Dash.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState_Idle.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy\E_Enemy01StateType.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_Heart.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_Alive.cs" />
+    <Compile Include="Assets\Scripts\Combat\IDamageable.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerState_AirBornd.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputHandler.cs" />
+    <Compile Include="Assets\Scripts\EventCenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
