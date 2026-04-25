@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerController>
 {
-    public PlayerState_Dash()
-    {
-        this.parentType = E_PlayerStateType.Alive;
-    }
 
     private float timer;
     private Vector2 dashDir;
     private float originalGravity;
     private AttackHitbox dashHitbox;
     private bool hasBounced; // 防止多次弹起
+    public PlayerState_Dash()
+    {
+        this.parentType = E_PlayerStateType.Alive;
+    }
 
     public override void OnEnter()
     {
@@ -86,7 +86,7 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
         // 恢复重力，反方向弹起
         owner.Rb.gravityScale = originalGravity;
         // 直接设速度而不是 AddForce，确保同帧生效
-        Vector2 bounceDir = new Vector2(-dashDir.x, 1f).normalized;
+        Vector2 bounceDir = new Vector2(-dashDir.x, 2f).normalized;
         owner.Rb.velocity = bounceDir * owner.DashBounceForce;
 
         // 请求 FreeFall 延迟落地检测，防止弹起被立刻拉回地面

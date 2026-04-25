@@ -48,6 +48,7 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
 
         if (hitbox != null)
         {
+            hitbox.damage = (int)owner.damage;
             hitbox.ResetHitRecord();
             hitbox.gameObject.SetActive(true);
         }

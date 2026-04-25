@@ -30,12 +30,11 @@ public class PlayerState_Grounded : HFSM_BaseState<E_PlayerStateType,PlayerContr
             return;
         }
 
-        // 蓄力攻击（仅地面可用）
-        if (InputManager.Instance.ChargeAttackAction.WasPressedThisFrame()
-            && owner.AbilityMgr.TryActivate(E_PlayerAbilityType.ChargeAttack))
+        // 蓄力攻击（仅地面可用，走 Ability 层，不切 HFSM 状态）
+        if (InputManager.Instance.ChargeAttackAction.WasPressedThisFrame())
         {
-            hfsm.SwitchState(E_PlayerStateType.ChargeAttack);
-            return;
+            owner.AbilityMgr.TryActivate(E_PlayerAbilityType.ChargeAttack);
+            // 不 return，蓄力不影响 HFSM 状态（但 Ability 内部会冻结移动）
         }
 
         // 跳跃优先判断（在土狼时间内仍然允许）

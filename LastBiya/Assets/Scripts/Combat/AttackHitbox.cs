@@ -11,6 +11,7 @@ public class AttackHitbox : MonoBehaviour
     [Header("伤害参数")]
     public int damage = 1;
     public float knockbackForce = 5f;
+    public DamageSource damageSource = DamageSource.Enemy;
 
     // 击退方向参考点，自动取根物体
     private Transform attackerRoot;
@@ -40,7 +41,7 @@ public class AttackHitbox : MonoBehaviour
         alreadyHit.Add(target);
 
         Vector2 knockbackDir = (other.transform.position - attackerRoot.position).normalized;
-        var info = new DamageInfo(damage, knockbackDir, knockbackForce);
+        var info = new DamageInfo(damage, knockbackDir, knockbackForce, damageSource);
         target.TakeDamage(info);
 
         // 触发命中回调（如果有）

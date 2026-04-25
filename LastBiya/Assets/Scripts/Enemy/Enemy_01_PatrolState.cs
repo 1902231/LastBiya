@@ -24,8 +24,8 @@ public class Enemy_01_PatrolState : HFSM_BaseState<E_Enemy01StateType, Enemy_01>
             return;
         }
 
-        // 前方没有平台 → 掉头
-        if (!owner.HasGroundAhead(owner.FacingDirection))
+        // 前方没有平台 或 前方有墙壁 → 掉头
+        if (!owner.HasGroundAhead(owner.FacingDirection) || owner.HasWallAhead(owner.FacingDirection))
         {
             owner.UpdateFacing(-owner.FacingDirection);
         }

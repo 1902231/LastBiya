@@ -30,8 +30,8 @@ public class Enemy_01_ChaseState : HFSM_BaseState<E_Enemy01StateType, Enemy_01>
         int dirToPlayer = owner.PlayerTransform.position.x > owner.transform.position.x ? 1 : -1;
         owner.UpdateFacing(dirToPlayer);
 
-        // 前方没有平台 → 停下，不追了
-        if (!owner.HasGroundAhead(dirToPlayer))
+        // 前方没有平台 或 有墙壁 → 停下，不追了
+        if (!owner.HasGroundAhead(dirToPlayer) || owner.HasWallAhead(dirToPlayer))
         {
             owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y);
             return;
@@ -40,8 +40,8 @@ public class Enemy_01_ChaseState : HFSM_BaseState<E_Enemy01StateType, Enemy_01>
 
     public override void OnFixedUpdate()
     {
-        // 只有前方有平台才移动
-        if (owner.HasGroundAhead(owner.FacingDirection))
+        // 只有前方有平台且没有墙壁才移动
+        if (owner.HasGroundAhead(owner.FacingDirection) && !owner.HasWallAhead(owner.FacingDirection))
         {
             owner.Rb.velocity = new Vector2(owner.FacingDirection * owner.chaseSpeed, owner.Rb.velocity.y);
         }

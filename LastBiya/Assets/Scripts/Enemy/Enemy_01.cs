@@ -34,6 +34,11 @@ public class Enemy_01 : MonoBehaviour, IDamageable
     public float edgeCheckDistance = 1.5f;
     public float edgeCheckAngle = 45f;
 
+    [Header("墙壁检测（水平射线）")]
+    [Tooltip("射线发射点相对敌人中心的偏移（y 控制高度，建议略高于脚底）")]
+    public Vector2 wallCheckOffset = new Vector2(0f, -0.2f);
+    public float wallCheckDistance = 0.5f;
+
     // 引用
     public Rigidbody2D Rb { get; private set; }
     public Transform PlayerTransform { get; private set; }
@@ -127,6 +132,16 @@ public class Enemy_01 : MonoBehaviour, IDamageable
     }
 
     /// <summary>
+    /// 检测前方是否有墙壁（水平射线）
+    /// </summary>
+    public bool HasWallAhead(int direction)
+    {
+        Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
+        Vector2 rayDir = new Vector2(direction, 0);
+        return Physics2D.Raycast(origin, rayDir, wallCheckDistance, groundLayer);
+    }
+
+    /// <summary>
     /// IDamageable 实现
     /// </summary>
     public void TakeDamage(DamageInfo info)
@@ -158,6 +173,14 @@ public class Enemy_01 : MonoBehaviour, IDamageable
             float angle = edgeCheckAngle * Mathf.Deg2Rad;
             Vector2 rayDir = new Vector2(Mathf.Sin(angle) * dir, -Mathf.Cos(angle));
             Gizmos.DrawRay(origin, rayDir * edgeCheckDistance);
+        }
+
+        // 墙壁检测射线
+        Gizmos.color = Color.magenta;
+        for (int dir = -1; dir <= 1; dir += 2)
+        {
+            Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
+            Gizmos.DrawRay(origin, new Vector2(dir, 0) * wallCheckDistance);
         }
     }
 }

@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Playables;
 using UnityEngine;
 
 /// <summary>
-/// ÄÜÁ¦¹ÜÀíÆ÷½Å±¾
-/// ÆäÊµÀýÖ§³Ö¶ÔAbilityµÄ×¢²á£¬²éÕÒ£¬ÐÞ¸ÄÒÔ¼°¼¤»î¡£
+/// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å±ï¿½
+/// ï¿½ï¿½Êµï¿½ï¿½Ö§ï¿½Ö¶ï¿½Abilityï¿½ï¿½×¢ï¿½á£¬ï¿½ï¿½ï¿½Ò£ï¿½ï¿½Þ¸ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½î¡£
 /// </summary>
-/// <typeparam name="TAbilityType">Ê¹ÓÃ¸Ã¹ÜÀíÆ÷ÐèÒªÅäÌ×Ã¶¾Ù£¬ÓÃÀ´¿ØÖÆAbilityµÄÖÖÀà</typeparam>
-/// <typeparam name="TOwner">¸Ã¹ÜÀíÆ÷µÄÊµ¼ÊÊ¹ÓÃÕß</typeparam>
+/// <typeparam name="TAbilityType">Ê¹ï¿½Ã¸Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ã¶ï¿½Ù£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Abilityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</typeparam>
+/// <typeparam name="TOwner">ï¿½Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½</typeparam>
 public class AbilityManager<TAbilityType,TOwner>
 {
-    //ÄÜÁ¦×Öµä
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½
     private Dictionary<TAbilityType, BaseAbility<TOwner>> abilityDic;
-    //µ±Ç°¼¤»îµÄÄÜÁ¦ÁÐ±í
+    //ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½
     private List<BaseAbility<TOwner>> activeAbilities = new();
 
     public TOwner Owner;
@@ -24,7 +23,7 @@ public class AbilityManager<TAbilityType,TOwner>
         abilityDic = new();
     }
 
-    //Ïò×Öµä×¢²áÄÜÁ¦µÄ·½·¨
+    //ï¿½ï¿½ï¿½Öµï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     public void AddAbilities(TAbilityType type,BaseAbility<TOwner> ability)
     {
         if (abilityDic.ContainsKey(type)) return;
@@ -33,7 +32,7 @@ public class AbilityManager<TAbilityType,TOwner>
     }
 
     /// <summary>
-    /// °´Ã¶¾Ù»ñÈ¡ Ability£¨·µ»Ø»ùÀàÀàÐÍ£©
+    /// ï¿½ï¿½Ã¶ï¿½Ù»ï¿½È¡ Abilityï¿½ï¿½ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½
     /// </summary>
     public BaseAbility<TOwner> Get(TAbilityType type)
     {
@@ -42,8 +41,8 @@ public class AbilityManager<TAbilityType,TOwner>
     }
 
     /// <summary>
-    /// °´Ã¶¾Ù»ñÈ¡ Ability ²¢×ª»»Îª¾ßÌåÀàÐÍ£¨ÓÃÓÚ»¤·ûÐÞ¸Ä²ÎÊýµÈ³¡¾°£©
-    /// ¿ÉÒÔ¸ù¾Ý´«Èë²ÎÊýÀàÐÍÕÒµ½¶ÔÓ¦±äÁ¿
+    /// ï¿½ï¿½Ã¶ï¿½Ù»ï¿½È¡ Ability ï¿½ï¿½×ªï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½Ú»ï¿½ï¿½ï¿½ï¿½Þ¸Ä²ï¿½ï¿½ï¿½ï¿½È³ï¿½ï¿½ï¿½ï¿½ï¿½
+    /// ï¿½ï¿½ï¿½Ô¸ï¿½ï¿½Ý´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
     /// </summary>
     public T Get<T>(TAbilityType type) where T : BaseAbility<TOwner>
     {
@@ -52,7 +51,7 @@ public class AbilityManager<TAbilityType,TOwner>
     }
 
     /// <summary>
-    /// ²éÑ¯Ä³¸ö Ability ÊÇ·ñÕýÔÚÖ´ÐÐ
+    /// ï¿½ï¿½Ñ¯Ä³ï¿½ï¿½ Ability ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
     /// </summary>
     public bool IsActive(TAbilityType type)
     {
@@ -60,24 +59,24 @@ public class AbilityManager<TAbilityType,TOwner>
     }
 
     /// <summary>
-    /// ³¢ÊÔ¼¤»îÒ»¸ö Ability
+    /// ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ Ability
     /// </summary>
     public bool TryActivate(TAbilityType type)
     {
         if (!abilityDic.TryGetValue(type, out var ability)) return false;
 
-        // µÚÒ»²½£ºÎÊ Ability ×Ô¼ºÄÜ²»ÄÜ¼¤»î
+        // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ability ï¿½Ô¼ï¿½ï¿½Ü²ï¿½ï¿½Ü¼ï¿½ï¿½ï¿½
         if (!ability.CanActivate()) return false;
 
-        // µÚ¶þ²½£º¼ì²éÊÇ·ñ±»¸ü¸ßÓÅÏÈ¼¶Ñ¹ÖÆ
+        // ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ñ±»¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½Ñ¹ï¿½ï¿½
         foreach (var active in activeAbilities)
         {
-            // ÓÐÒ»¸öÕýÔÚÖ´ÐÐµÄ Ability ÓÅÏÈ¼¶ >= ÎÒ£¬²¢ÇÒËüµ±Ç°²»¿É´ò¶Ï
+            // ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ðµï¿½ Ability ï¿½ï¿½ï¿½È¼ï¿½ >= ï¿½Ò£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½É´ï¿½ï¿½
             if (active.priority >= ability.priority && !active.CanBeInterrupted())
-                return false;  // ¼¤»îÊ§°Ü
+                return false;  // ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½
         }
 
-        // µÚÈý²½£º´ò¶ÏËùÓÐÓÅÏÈ¼¶¸üµÍµÄ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½Íµï¿½
         for (int i = activeAbilities.Count - 1; i >= 0; i--)
         {
             if (activeAbilities[i].priority < ability.priority)
@@ -87,23 +86,23 @@ public class AbilityManager<TAbilityType,TOwner>
             }
         }
 
-        // µÚËÄ²½£º¼¤»î
+        // ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         ability.Activate();
         activeAbilities.Add(ability);
         return true;
     }
 
     /// <summary>
-    /// Ã¿Ö¡µ÷ÓÃ£¬Çý¶¯ËùÓÐ¼¤»îÖÐµÄ Ability
+    /// Ã¿Ö¡ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Ability
     /// </summary>
     public void Tick(float deltaTime)
     {
         for (int i = activeAbilities.Count - 1; i >= 0; i--)
         {
-            // Ã¿¸ö¼¤»îÖÐµÄ Ability Ö´ÐÐ×Ô¼ºµÄÃ¿Ö¡Âß¼­
+            // Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ Ability Ö´ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½Ã¿Ö¡ï¿½ß¼ï¿½
             activeAbilities[i].Tick(deltaTime);
 
-            // Èç¹û Ability ÔÚ Tick ÖÐ×Ô¼º½áÊøÁË£¨±ÈÈç³å´ÌÊ±¼äµ½ÁË£©£¬´ÓÁÐ±íÒÆ³ý
+            // ï¿½ï¿½ï¿½ Ability ï¿½ï¿½ Tick ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½äµ½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½Æ³ï¿½
             if (!activeAbilities[i].isActive)
                 activeAbilities.RemoveAt(i);
         }

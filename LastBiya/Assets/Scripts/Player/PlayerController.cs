@@ -18,7 +18,6 @@ public enum E_PlayerStateType
     //独立状态
     Dash,
     Heart,
-    ChargeAttack,
 }
 
 public enum E_PlayerAbilityType
@@ -62,6 +61,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float ChargeTime = 1f;
     [Tooltip("蓄力释放后 Hitbox 持续时间")]
     public float ChargeReleaseDuration = 0.2f;
+    [Tooltip("蓄力攻击伤害")]
+    public float ChargeDamage = 30;
 
     /// <summary>
     /// 最近一次受伤信息，供 Heart 状态读取
@@ -90,6 +91,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     [Tooltip("下冲角度，0 = 正下方，90 = 水平，建议 30~60")]
     [Range(0f, 89f)]
     public float FallingDashAngle = 45f;
+    [Tooltip("下冲伤害")]
+    public float FallingDashDamage = 15;
 
     [Header("土狼时间")]
     public float CoyoteTime = 0.12f;
@@ -185,7 +188,6 @@ public class PlayerController : MonoBehaviour, IDamageable
         playerFsm.AddState(E_PlayerStateType.FallingDash, new PlayerState_FallingDash());
 
         playerFsm.AddState(E_PlayerStateType.Heart, new PlayerState_Heart());
-        playerFsm.AddState(E_PlayerStateType.ChargeAttack, new PlayerState_ChargeAttack());
 
         playerFsm.SwitchState(E_PlayerStateType.Idle);
 
@@ -214,11 +216,12 @@ public class PlayerController : MonoBehaviour, IDamageable
         var ca = AbilityMgr.Get(E_PlayerAbilityType.ChargeAttack);
         if (ca != null) ca.isUnlocked = ChargeAttackUnlocked;
 
-        // 驱动能力系统
-        AbilityMgr.Tick(Time.deltaTime);
-
         //状态机运行
         playerFsm.OnUpdate();
+
+        // 驱动能力系统（在 HFSM 之后，确保 Ability 动画覆盖 HFSM 动画）
+        AbilityMgr.Tick(Time.deltaTime);
+
         Debug.Log("玩家当前状态：" + playerFsm.currentState);
     }
 
@@ -241,11 +244,17 @@ public class PlayerController : MonoBehaviour, IDamageable
     }
 
     /// <summary>
+    /// 是否有 Ability 锁定了移动（蓄力攻击等）
+    /// </summary>
+    public bool IsMovementLocked => AbilityMgr.IsActive(E_PlayerAbilityType.ChargeAttack);
+
+    /// <summary>
     /// 用力驱动水平移动，在 FixedUpdate 中调用
     /// 计算目标速度与当前速度的差值，施加对应的力
     /// </summary>
     public void ApplyHorizontalMovement(float inputX)
     {
+        if (IsMovementLocked) return;
         float targetSpeed = inputX * MoveSpeed;
         float speedDiff = targetSpeed - Rb.velocity.x;
         Rb.AddForce(Vector2.right * speedDiff * MoveAcceleration, ForceMode2D.Force);
@@ -254,11 +263,20 @@ public class PlayerController : MonoBehaviour, IDamageable
 
 
     /// <summary>
+    /// 是否处于无敌状态（下冲等），免疫敌人攻击但不免疫陷阱
+    /// </summary>
+    public bool IsInvincible { get; set; }
+
+    /// <summary>
     /// IDamageable 实现：受到伤害时调用
     /// 扣血 → 存储伤害信息 → 通过事件中心通知状态机
     /// </summary>
     public void TakeDamage(DamageInfo info)
     {
+        // 无敌期间免疫敌人攻击
+        if (IsInvincible && info.source == DamageSource.Enemy)
+            return;
+
         currentHP -= info.damage;
         LastDamageInfo = info;
         EventCenter.Instance.EventTrigger<DamageInfo>("PlayerHurt", info);
