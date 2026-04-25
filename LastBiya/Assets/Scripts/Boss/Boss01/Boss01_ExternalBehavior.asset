@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: Boss01_ExternalBehavior
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: Boss01
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(361.2,119.942017)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(4.79986572,113.799561)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Parallel","NodeData":{"Offset":"(-4.63977051,121.944214)"},"ID":2,"Name":"Parallel","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-193.658569,110)","Comment":"\u68c0\u6d4b\u6b7b\u4ea1"},"ID":3,"Name":"Inverter","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-10.6383028,120.6383)"},"ID":4,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Inverter","NodeData":{"Offset":"(-82.32468,118.714691)"},"ID":5,"Name":"Inverter","Instant":true,"Children":[{"Type":"CheckBossHp_01","NodeData":{"Offset":"(0,110)"},"ID":6,"Name":"Check
+        Boss Hp  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"SingleminHP":0,"SinglemaxHP":500}]},{"Type":"SwitchBossState_01","NodeData":{"Offset":"(64.4934845,117.351074)"},"ID":7,"Name":"Switch
+        Boss State  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"Dead"}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(464.091,98.63637)"},"ID":8,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-242.64212,162.112915)","Comment":"\u8ddd\u79bb\u68c0\u6d4b"},"ID":9,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"CheckBossDerection_01","NodeData":{"Offset":"(-134.888489,118.163277)"},"ID":10,"Name":"CheckDistance","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"SharedFloatdistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distance","IsShared":true,"SinglemValue":0}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.FloatComparison","NodeData":{"Offset":"(1.27756119,121.662231)"},"ID":11,"Name":"Float
+        Comparison","Instant":true,"Operationoperation":"GreaterThan","SharedFloatfloat1":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distance","IsShared":true,"SinglemValue":0},"SharedFloatfloat2":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":8}},{"Type":"BehaviorDesigner.Runtime.Tasks.RandomSelector","NodeData":{"Offset":"(364.157043,120.000008)"},"ID":12,"Name":"Random
+        Selector","Instant":true,"Int32seed":0,"BooleanuseSeed":false,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-190.000244,115.71431)","Comment":"\u8d70\u5411\u73a9\u5bb6"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SwitchBossState_01","NodeData":{"Offset":"(-63.1818352,122.727264)"},"ID":14,"Name":"Switch
+        Move","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"Move"},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(61.04919,119.793549)"},"ID":15,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":2.5},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(47.7753525,121.75061)","Comment":"\u8fdc\u7a0b\u653b\u51fb"},"ID":16,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SwitchBossState_01","NodeData":{"Offset":"(-11.3636351,119.3617)"},"ID":17,"Name":"Switch
+        RangedAttack","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"RangedAttack"},{"Type":"WaitForStateComplete_01","NodeData":{"Offset":"(170.2469,118.810455)"},"ID":18,"Name":"Wait
+        For State Complete  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true}}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.RandomSelector","NodeData":{"Offset":"(516.2084,183.181839)"},"ID":19,"Name":"Random
+        Selector","Instant":true,"Int32seed":0,"BooleanuseSeed":false,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-127.180771,93.2446747)","Comment":"\u666e\u901a\u653b\u51fb"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SwitchBossState_01","NodeData":{"Offset":"(-41.9149323,114.46814)"},"ID":21,"Name":"Switch
+        To Attack","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"SlashAttack"},{"Type":"WaitForStateComplete_01","NodeData":{"Offset":"(124.877258,105.303955)"},"ID":22,"Name":"Wait
+        For State Complete  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(283.4833,84.36167)","Comment":"\u9707\u8361\u51b2\u51fb"},"ID":23,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"SwitchBossState_01","NodeData":{"Offset":"(-130.63829,120.434219)"},"ID":24,"Name":"Switch
+        toFlyUp","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"FlyUp"},{"Type":"WaitForStateComplete_01","NodeData":{"Offset":"(26.595808,119.999939)"},"ID":25,"Name":"Wait
+        For State Complete  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true}},{"Type":"SwitchBossState_01","NodeData":{"Offset":"(204.468033,120.434219)"},"ID":26,"Name":"Switch
+        to FallDown","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true},"E_BossStateType_01TaegetBossState":"SlamDown"},{"Type":"WaitForStateComplete_01","NodeData":{"Offset":"(371.063843,119.361839)"},"ID":27,"Name":"Wait
+        For State Complete  01","Instant":true,"SharedBossController_01boss":{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true}}]}]}]}]}]},"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"distance","IsShared":true,"SinglemValue":0},{"Type":"SharedBossController_01","Name":"SharedBossController","IsShared":true}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.13
