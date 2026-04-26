@@ -18,6 +18,12 @@ public class PlayerState_AirBornd : HFSM_BaseState<E_PlayerStateType,PlayerContr
 
     public override void OnUpdate()
     {
+        // 攻击输入
+        if (InputManager.Instance.Consume(InputManager.Instance.AttackAction))
+        {
+            owner.AbilityMgr.TryActivate(E_PlayerAbilityType.Attack);
+        }
+
         // 空中朝向更新，所有子状态（Jump、FreeFall 等）都继承
         owner.UpdateFacing(InputManager.Instance.MoveInput.x);
     }
