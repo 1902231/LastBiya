@@ -10,6 +10,17 @@ public class Boss01 : MonoBehaviour, IDamageable
     public float maxHP = 500;
     public float currentHP;
 
+    [Header("躯干值")]
+    [Tooltip("最大躯干值")]
+    public float maxPosture = 100;
+    [Tooltip("当前躯干值")]
+    public float currentPosture;
+    [Tooltip("破防时的击退力度")]
+    public float stunnedKnockbackForce = 8f;
+    [Tooltip("破防击退角度，0 = 正上方，90 = 水平，建议 20~40")]
+    [Range(0f, 89f)]
+    public float stunnedKnockbackAngle = 30f;
+
     [Header("移动")]
     public float moveSpeed = 3f;
     [Tooltip("移动时的加速度")]
@@ -105,6 +116,7 @@ public class Boss01 : MonoBehaviour, IDamageable
     {
         Rb = GetComponent<Rigidbody2D>();
         currentHP = maxHP;
+        currentPosture = maxPosture;
 
         // 查找玩家
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -264,6 +276,34 @@ public class Boss01 : MonoBehaviour, IDamageable
     }
 
     /// <summary>
+    /// 获取躯干值百分比（0-1）
+    /// </summary>
+    public float GetPosturePercentage()
+    {
+        return currentPosture / maxPosture;
+    }
+
+    /// <summary>
+    /// 对躯干值造成伤害，返回是否破防
+    /// </summary>
+    public bool DamagePosture(float amount)
+    {
+        if (IsPostureBroken) return false;
+        currentPosture -= amount;
+        if (currentPosture <= 0)
+        {
+            currentPosture = 0;
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// 躯干值是否已归零
+    /// </summary>
+    public bool IsPostureBroken => currentPosture <= 0;
+
+    /// <summary>
     /// 当前状态的行为是否已完成（供 Behavior Designer 查询）
     /// </summary>
     public bool IsCurrentStateComplete()
@@ -289,12 +329,16 @@ public class Boss01 : MonoBehaviour, IDamageable
         currentHP -= info.damage;
         LastDamageInfo = info;
 
+        // 韧性伤害
+        if (info.postureDamage > 0)
+            DamagePosture(info.postureDamage);
+
         if (currentHP <= 0)
         {
-            StateMachine.SwitchState(E_BossStateType_01.Dead);
-            currentStateType = E_BossStateType_01.Dead;
+            // 测试用：注释掉死亡切换
+            // StateMachine.SwitchState(E_BossStateType_01.Dead);
+            // currentStateType = E_BossStateType_01.Dead;
         }
-        // 注意：不自动切换到受击状态，由 Behavior Designer 决定是否打断当前行为
     }
 
     void OnDrawGizmosSelected()

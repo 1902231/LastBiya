@@ -19,6 +19,8 @@ public class Enemy_01 : MonoBehaviour, IDamageable
     public float attackDuration = 0.4f;
     public float attackCooldown = 1f;
     [HideInInspector] public float attackCooldownTimer;
+    [Tooltip("攻击判定 Hitbox")]
+    public AttackHitbox attackHitbox;
 
     [Header("受击")]
     public float hurtDuration = 0.3f;

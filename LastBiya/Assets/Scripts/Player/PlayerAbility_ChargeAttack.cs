@@ -11,6 +11,7 @@ public class PlayerAbility_ChargeAttack : BaseAbility<PlayerController>
     private float releaseTimer;
     private bool isReleased;
     private AttackHitbox chargeHitbox;
+    private BookCotroller bookCompanion;
 
     public PlayerAbility_ChargeAttack()
     {
@@ -69,7 +70,9 @@ public class PlayerAbility_ChargeAttack : BaseAbility<PlayerController>
                 if (chargeHitbox != null)
                 {
                     chargeHitbox.damage = (int)owner.ChargeDamage;
+                    chargeHitbox.postureDamage = owner.ChargePostureDamage;
                     chargeHitbox.ResetHitRecord();
+                    chargeHitbox.onHitCallback = OnChargeHit;
                     chargeHitbox.gameObject.SetActive(true);
                 }
             }
@@ -88,7 +91,18 @@ public class PlayerAbility_ChargeAttack : BaseAbility<PlayerController>
     {
         base.Deactivate();
         if (chargeHitbox != null)
+        {
+            chargeHitbox.onHitCallback = null;
             chargeHitbox.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnChargeHit(Collider2D other)
+    {
+        if (bookCompanion == null)
+            bookCompanion = Object.FindObjectOfType<BookCotroller>();
+        if (bookCompanion != null)
+            bookCompanion.EnqueueTarget(other.transform);
     }
 
     private void FindChargeHitbox()

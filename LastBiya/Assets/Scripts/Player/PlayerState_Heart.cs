@@ -15,6 +15,14 @@ public class PlayerState_Heart : HFSM_BaseState<E_PlayerStateType, PlayerControl
         timer = 0f;
         hasRecovered = false;
 
+        // 受伤无敌
+        var invincible = owner.AbilityMgr.Get<PlayerAbility_Invincible>(E_PlayerAbilityType.Invincible);
+        if (invincible != null)
+        {
+            invincible.SetDuration(owner.HurtInvincibleDuration);
+            owner.AbilityMgr.TryActivate(E_PlayerAbilityType.Invincible);
+        }
+
         // 顿帧：冻结时间
         Time.timeScale = owner.HurtTimeScale;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
