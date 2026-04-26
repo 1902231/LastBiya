@@ -22,6 +22,12 @@ public class PlayerState_Grounded : HFSM_BaseState<E_PlayerStateType,PlayerContr
 
     public override void OnUpdate()
     {
+        // 攻击输入
+        if (InputManager.Instance.Consume(InputManager.Instance.AttackAction))
+        {
+            owner.AbilityMgr.TryActivate(E_PlayerAbilityType.Attack);
+        }
+
         // 冲刺优先级最高（仅次于受伤），无缓冲，实时检测
         if (InputManager.Instance.DashAction.WasPressedThisFrame()
             && owner.AbilityMgr.TryActivate(E_PlayerAbilityType.Dash))

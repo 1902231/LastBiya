@@ -17,6 +17,8 @@ public enum E_PlayerStateType
     FallingDash,
     //独立状态
     Dash,
+    DashBounce,
+    FallingDashSlide,
     Heart,
 }
 
@@ -27,6 +29,7 @@ public enum E_PlayerAbilityType
     FallingDash,
     Attack,
     ChargeAttack,
+    Invincible,
 }
 
 public class PlayerController : MonoBehaviour, IDamageable
@@ -78,6 +81,7 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float JumpCutMultiplier = 0.5f;
     public bool isGrounded;
 
+    [Header("冲刺")]
     public float DashSpeed = 20f;
     public float DashDuration = 0.15f;
     public float DashCooldown = 1f;
@@ -85,14 +89,22 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     [Tooltip("冲刺命中敌人时的反弹力度")]
     public float DashBounceForce = 8f;
+    [Tooltip("冲刺反弹无敌持续时间")]
+    public float DashBounceDuration = 0.3f;
 
     [Header("下落冲刺")]
     public float FallingDashSpeed = 30f;
+    [Tooltip("下冲前摇时间")]
+    public float FallingDashWindupDuration = 0.2f;
     [Tooltip("下冲角度，0 = 正下方，90 = 水平，建议 30~60")]
     [Range(0f, 89f)]
     public float FallingDashAngle = 45f;
     [Tooltip("下冲伤害")]
     public float FallingDashDamage = 15;
+    [Tooltip("下冲二段水平滑行力度")]
+    public float FallingDashSlideForce = 15f;
+    [Tooltip("下冲二段持续时间")]
+    public float FallingDashSlideDuration = 0.3f;
 
     [Header("土狼时间")]
     public float CoyoteTime = 0.12f;
@@ -123,6 +135,10 @@ public class PlayerController : MonoBehaviour, IDamageable
     [SerializeField] private Vector2 groundCheckOffset = new Vector2(0, -0.5f);
     [SerializeField] private float groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("墙壁检测")]
+    [SerializeField] private float wallCheckDistance = 0.5f;
+    [SerializeField] private LayerMask wallLayer;
 
 
     public Rigidbody2D Rb { get; private set; }
@@ -172,6 +188,10 @@ public class PlayerController : MonoBehaviour, IDamageable
         chargeAttack.isUnlocked = ChargeAttackUnlocked;
         AbilityMgr.AddAbilities(E_PlayerAbilityType.ChargeAttack, chargeAttack);
 
+        var invincible = new PlayerAbility_Invincible();
+        invincible.isUnlocked = true;
+        AbilityMgr.AddAbilities(E_PlayerAbilityType.Invincible, invincible);
+
 
         playerFsm.AddState(E_PlayerStateType.Alive, new PlayerState_Alive());
 
@@ -185,7 +205,9 @@ public class PlayerController : MonoBehaviour, IDamageable
         playerFsm.AddState(E_PlayerStateType.FreeFall, new PlayerState_FreeFall());
 
         playerFsm.AddState(E_PlayerStateType.Dash, new PlayerState_Dash());
+        playerFsm.AddState(E_PlayerStateType.DashBounce, new PlayerState_DashBounce());
         playerFsm.AddState(E_PlayerStateType.FallingDash, new PlayerState_FallingDash());
+        playerFsm.AddState(E_PlayerStateType.FallingDashSlide, new PlayerState_FallingDashSlide());
 
         playerFsm.AddState(E_PlayerStateType.Heart, new PlayerState_Heart());
 
@@ -247,6 +269,28 @@ public class PlayerController : MonoBehaviour, IDamageable
     /// 是否有 Ability 锁定了移动（蓄力攻击等）
     /// </summary>
     public bool IsMovementLocked => AbilityMgr.IsActive(E_PlayerAbilityType.ChargeAttack);
+
+    /// <summary>
+    /// 检测面朝方向是否有墙壁
+    /// </summary>
+    public bool IsWallAhead()
+    {
+        Vector2 origin = transform.position;
+        return Physics2D.Raycast(origin, Vector2.right * FacingDirection, wallCheckDistance, wallLayer);
+    }
+
+    /// <summary>
+    /// 检测左右两侧是否有墙壁
+    /// </summary>
+    public bool IsWallOnEitherSide()
+    {
+        Vector2 origin = transform.position;
+        if (Physics2D.Raycast(origin, Vector2.right, wallCheckDistance, wallLayer))
+            return true;
+        if (Physics2D.Raycast(origin, Vector2.left, wallCheckDistance, wallLayer))
+            return true;
+        return false;
+    }
 
     /// <summary>
     /// 用力驱动水平移动，在 FixedUpdate 中调用

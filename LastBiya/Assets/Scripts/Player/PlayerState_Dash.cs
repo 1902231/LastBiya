@@ -25,11 +25,6 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
         else
             dashDir = new Vector2(owner.FacingDirection, 0);
 
-        // 关闭重力
-        originalGravity = owner.Rb.gravityScale;
-        owner.Rb.gravityScale = 0f;
-        owner.Rb.velocity = dashDir * owner.DashSpeed;
-
         // 启用 DashHitbox（名字包含 "Dash" 的子物体）
         if (dashHitbox == null)
             dashHitbox = FindDashHitbox();
@@ -40,6 +35,11 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
             dashHitbox.onHitCallback = OnDashHit;
             dashHitbox.gameObject.SetActive(true);
         }
+
+        // 关闭重力，施加冲刺速度
+        originalGravity = owner.Rb.gravityScale;
+        owner.Rb.gravityScale = 0f;
+        owner.Rb.velocity = dashDir * owner.DashSpeed;
     }
 
     public override void OnUpdate()
@@ -85,15 +85,11 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
 
         // 恢复重力，反方向弹起
         owner.Rb.gravityScale = originalGravity;
-        // 直接设速度而不是 AddForce，确保同帧生效
         Vector2 bounceDir = new Vector2(-dashDir.x, 2f).normalized;
         owner.Rb.velocity = bounceDir * owner.DashBounceForce;
 
-        // 请求 FreeFall 延迟落地检测，防止弹起被立刻拉回地面
-        PlayerState_FreeFall.RequestGroundCheckDelay(0.1f);
-
-        // 立刻切到空中状态
-        hfsm.SwitchState(E_PlayerStateType.AirBornd);
+        // 切到回弹状态（由回弹状态管理无敌）
+        hfsm.SwitchState(E_PlayerStateType.DashBounce);
     }
 
     private AttackHitbox FindDashHitbox()
