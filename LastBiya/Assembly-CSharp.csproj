@@ -600,8 +600,8 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Math\FloatClamp.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss01\Boss_RangedAttackState.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Rigidbody2D\IsKinematic.cs" />
-    <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\SetRotation.cs" />
     <Compile Include="Assets\Scripts\Book\BookCotroller.cs" />
+    <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\SetRotation.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector2\SetValue.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerState_Alive.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\ParticleSystem\GetPlaybackSpeed.cs" />
