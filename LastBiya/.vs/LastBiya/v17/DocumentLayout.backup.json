@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\behavior designer\\runtime\\tasks\\actions\\stopbehaviortree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\behaviornotes\\checkbossposature_01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\behaviornotes\\checkbossposature_01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\behaviornotes\\checkbossposature_01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -216,7 +216,7 @@
               "RelativeDocumentMoniker": "Assets\\Behavior Designer\\Runtime\\Tasks\\Actions\\StopBehaviorTree.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Behavior Designer\\Runtime\\Tasks\\Actions\\StopBehaviorTree.cs",
               "RelativeToolTip": "Assets\\Behavior Designer\\Runtime\\Tasks\\Actions\\StopBehaviorTree.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAuwCwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-26T15:12:01.627Z",
               "EditorCaption": ""
@@ -231,8 +231,7 @@
               "RelativeToolTip": "Assets\\BehaviorNotes\\CheckBossPosature_01.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T13:55:50.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-26T13:55:50.031Z"
             },
             {
               "$type": "Document",
