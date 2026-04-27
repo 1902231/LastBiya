@@ -1061,8 +1061,8 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 527899914}
   - {fileID: 1362397259}
+  - {fileID: 527899914}
   - {fileID: 1358669007}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1422,8 +1422,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.13
-  gizmoViewMode: 0
-  showBehaviorDesignerGizmo: 0
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!114 &687012232
 MonoBehaviour:
   m_ObjectHideFlags: 0
