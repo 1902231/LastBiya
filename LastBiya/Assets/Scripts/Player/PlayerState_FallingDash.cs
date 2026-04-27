@@ -7,6 +7,7 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
     private AttackHitbox fallingDashHitbox;
     private float timer;
     private Phase currentPhase;
+    private BookCotroller bookCompanion;
 
     private enum Phase
     {
@@ -48,6 +49,13 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
                 break;
 
             case Phase.Active:
+                // 超时
+                if (timer >= owner.FallingDashMaxDuration)
+                {
+                    hfsm.SwitchState(E_PlayerStateType.FreeFall);
+                    return;
+                }
+
                 // 墙壁检测优先于落地检测
                 if (owner.IsWallOnEitherSide())
                 {
@@ -80,12 +88,16 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
         owner.IsInvincible = false;
 
         if (fallingDashHitbox != null)
+        {
+            fallingDashHitbox.onHitCallback = null;
             fallingDashHitbox.gameObject.SetActive(false);
+        }
     }
 
     private void StartDash()
     {
         currentPhase = Phase.Active;
+        timer = 0f; // 重置计时，从下冲开始算
 
         // 计算冲刺方向
         float rad = owner.FallingDashAngle * Mathf.Deg2Rad;
@@ -101,9 +113,19 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
         if (fallingDashHitbox != null)
         {
             fallingDashHitbox.damage = (int)owner.FallingDashDamage;
+            fallingDashHitbox.postureDamage = owner.FallingDashPostureDamage;
             fallingDashHitbox.ResetHitRecord();
+            fallingDashHitbox.onHitCallback = OnFallingDashHit;
             fallingDashHitbox.gameObject.SetActive(true);
         }
+    }
+
+    private void OnFallingDashHit(Collider2D other)
+    {
+        if (bookCompanion == null)
+            bookCompanion = Object.FindObjectOfType<BookCotroller>();
+        if (bookCompanion != null)
+            bookCompanion.EnqueueTarget(other.transform);
     }
 
     private void FindFallingDashHitbox()

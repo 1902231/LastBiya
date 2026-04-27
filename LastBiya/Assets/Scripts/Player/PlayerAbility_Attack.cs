@@ -14,6 +14,7 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
     private AttackHitbox hitbox;
     private float elapsed;
     private bool isInRecovery;
+    private BookCotroller bookCompanion;
 
     public PlayerAbility_Attack()
     {
@@ -49,7 +50,9 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
         if (hitbox != null)
         {
             hitbox.damage = (int)owner.damage;
+            hitbox.postureDamage = owner.AttackPostureDamage;
             hitbox.ResetHitRecord();
+            hitbox.onHitCallback = OnAttackHit;
             hitbox.gameObject.SetActive(true);
         }
     }
@@ -81,6 +84,18 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
     private void DisableHitbox()
     {
         if (hitbox != null)
+        {
+            hitbox.onHitCallback = null;
             hitbox.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnAttackHit(Collider2D other)
+    {
+        // 通知飞书辅助机
+        if (bookCompanion == null)
+            bookCompanion = Object.FindObjectOfType<BookCotroller>();
+        if (bookCompanion != null)
+            bookCompanion.EnqueueTarget(other.transform);
     }
 }

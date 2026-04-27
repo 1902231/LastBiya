@@ -7,7 +7,8 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
     private Vector2 dashDir;
     private float originalGravity;
     private AttackHitbox dashHitbox;
-    private bool hasBounced; // 防止多次弹起
+    private bool hasBounced;
+    private BookCotroller bookCompanion;
     public PlayerState_Dash()
     {
         this.parentType = E_PlayerStateType.Alive;
@@ -31,6 +32,7 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
 
         if (dashHitbox != null)
         {
+            dashHitbox.postureDamage = owner.DashPostureDamage;
             dashHitbox.ResetHitRecord();
             dashHitbox.onHitCallback = OnDashHit;
             dashHitbox.gameObject.SetActive(true);
@@ -80,12 +82,19 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
     /// </summary>
     private void OnDashHit(Collider2D other)
     {
+        // 通知飞书
+        if (bookCompanion == null)
+            bookCompanion = Object.FindObjectOfType<BookCotroller>();
+        if (bookCompanion != null)
+            bookCompanion.EnqueueTarget(other.transform);
+
         if (hasBounced) return;
         hasBounced = true;
 
-        // 恢复重力，反方向弹起
+        // 恢复重力，按角度反弹
         owner.Rb.gravityScale = originalGravity;
-        Vector2 bounceDir = new Vector2(-dashDir.x, 2f).normalized;
+        float rad = owner.DashBounceAngle * Mathf.Deg2Rad;
+        Vector2 bounceDir = new Vector2(-dashDir.x * Mathf.Sin(rad), Mathf.Cos(rad)).normalized;
         owner.Rb.velocity = bounceDir * owner.DashBounceForce;
 
         // 切到回弹状态（由回弹状态管理无敌）

@@ -2,11 +2,40 @@ using UnityEngine;
 
 public class Enemy_03_DeadState : HFSM_BaseState<E_Enemy03StateType, Enemy_03>
 {
+    private bool hasLanded;
+
     public override void OnEnter()
     {
-        owner.Rb.velocity = Vector2.zero;
-        owner.Rb.gravityScale = 1f; // 死后恢复重力，尸体掉落
-        var col = owner.GetComponent<Collider2D>();
-        if (col != null) col.enabled = false;
+        owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y);
+        owner.Rb.gravityScale = 1f;
+        hasLanded = false;
+
+        SetLayerRecursively(owner.gameObject, LayerMask.NameToLayer("DeadUnit"));
+    }
+
+    public override void OnFixedUpdate()
+    {
+        if (hasLanded) return;
+
+        owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y);
+
+        if (IsGrounded())
+        {
+            hasLanded = true;
+            owner.Rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        Vector2 checkPos = (Vector2)owner.transform.position + Vector2.down * 0.5f;
+        return Physics2D.OverlapCircle(checkPos, 0.1f, LayerMask.GetMask("Ground"));
+    }
+
+    private void SetLayerRecursively(GameObject obj, int layer)
+    {
+        obj.layer = layer;
+        foreach (Transform child in obj.transform)
+            SetLayerRecursively(child.gameObject, layer);
     }
 }

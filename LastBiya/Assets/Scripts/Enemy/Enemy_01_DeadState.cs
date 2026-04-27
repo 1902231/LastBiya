@@ -1,21 +1,45 @@
 using UnityEngine;
 
 /// <summary>
-/// 死亡状态：禁用碰撞，以后加死亡动画和销毁
+/// 死亡状态：切换Layer，落地后锁定X轴
 /// </summary>
 public class Enemy_01_DeadState : HFSM_BaseState<E_Enemy01StateType, Enemy_01>
 {
     // 无 parent，和 Alive 平级
 
+    private bool hasLanded;
+
     public override void OnEnter()
     {
-        owner.Rb.velocity = Vector2.zero;
+        owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y);
+        hasLanded = false;
 
-        // 禁用碰撞体，防止继续被攻击或挡路
-        var col = owner.GetComponent<Collider2D>();
-        if (col != null) col.enabled = false;
+        SetLayerRecursively(owner.gameObject, LayerMask.NameToLayer("DeadUnit"));
+    }
 
-        // 以后在这里播放死亡动画、延迟销毁等
-        // GameObject.Destroy(owner.gameObject, 1f);
+    public override void OnFixedUpdate()
+    {
+        if (hasLanded) return;
+
+        owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y);
+
+        if (IsGrounded())
+        {
+            hasLanded = true;
+            owner.Rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        Vector2 checkPos = (Vector2)owner.transform.position + Vector2.down * 0.5f;
+        return Physics2D.OverlapCircle(checkPos, 0.1f, owner.groundLayer);
+    }
+
+    private void SetLayerRecursively(GameObject obj, int layer)
+    {
+        obj.layer = layer;
+        foreach (Transform child in obj.transform)
+            SetLayerRecursively(child.gameObject, layer);
     }
 }

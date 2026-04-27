@@ -53,11 +53,16 @@ public class PlayerController : MonoBehaviour, IDamageable
     [Tooltip("击退硬直时长（游戏秒数）")]
     public float KnockbackDuration = 0.3f;
 
+    [Tooltip("受伤后无敌持续时间")]
+    public float HurtInvincibleDuration = 1f;
+
     [Header("攻击属性")]
     [Tooltip("攻击判定帧持续时间")]
     public float AttackActiveDuration = 0.15f;
     [Tooltip("攻击后摇时间")]
     public float AttackRecoveryDuration = 0.2f;
+    [Tooltip("普通攻击韧性伤害")]
+    public float AttackPostureDamage = 5f;
 
     [Header("蓄力攻击属性")]
     [Tooltip("蓄力所需时间")]
@@ -66,6 +71,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float ChargeReleaseDuration = 0.2f;
     [Tooltip("蓄力攻击伤害")]
     public float ChargeDamage = 30;
+    [Tooltip("蓄力攻击韧性伤害")]
+    public float ChargePostureDamage = 20f;
 
     /// <summary>
     /// 最近一次受伤信息，供 Heart 状态读取
@@ -89,6 +96,11 @@ public class PlayerController : MonoBehaviour, IDamageable
 
     [Tooltip("冲刺命中敌人时的反弹力度")]
     public float DashBounceForce = 8f;
+    [Tooltip("冲刺反弹角度，0 = 正上方，90 = 水平反方向，建议 20~45")]
+    [Range(0f, 89f)]
+    public float DashBounceAngle = 30f;
+    [Tooltip("冲刺韧性伤害")]
+    public float DashPostureDamage = 3f;
     [Tooltip("冲刺反弹无敌持续时间")]
     public float DashBounceDuration = 0.3f;
 
@@ -101,6 +113,10 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float FallingDashAngle = 45f;
     [Tooltip("下冲伤害")]
     public float FallingDashDamage = 15;
+    [Tooltip("下冲韧性伤害")]
+    public float FallingDashPostureDamage = 10f;
+    [Tooltip("下冲最大持续时间")]
+    public float FallingDashMaxDuration = 0.8f;
     [Tooltip("下冲二段水平滑行力度")]
     public float FallingDashSlideForce = 15f;
     [Tooltip("下冲二段持续时间")]

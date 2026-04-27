@@ -14,13 +14,15 @@ public enum DamageSource
 public struct DamageInfo
 {
     public int damage;
+    public float postureDamage;
     public Vector2 knockbackDir;
     public float knockbackForce;
     public DamageSource source;
 
-    public DamageInfo(int damage, Vector2 knockbackDir, float knockbackForce, DamageSource source = DamageSource.Enemy)
+    public DamageInfo(int damage, Vector2 knockbackDir, float knockbackForce, DamageSource source = DamageSource.Enemy, float postureDamage = 0f)
     {
         this.damage = damage;
+        this.postureDamage = postureDamage;
         this.knockbackDir = knockbackDir;
         this.knockbackForce = knockbackForce;
         this.source = source;

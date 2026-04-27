@@ -10,6 +10,7 @@ public class AttackHitbox : MonoBehaviour
 {
     [Header("伤害参数")]
     public int damage = 1;
+    public float postureDamage = 0f;
     public float knockbackForce = 5f;
     public DamageSource damageSource = DamageSource.Enemy;
 
@@ -41,7 +42,7 @@ public class AttackHitbox : MonoBehaviour
         alreadyHit.Add(target);
 
         Vector2 knockbackDir = (other.transform.position - attackerRoot.position).normalized;
-        var info = new DamageInfo(damage, knockbackDir, knockbackForce, damageSource);
+        var info = new DamageInfo(damage, knockbackDir, knockbackForce, damageSource, postureDamage);
         target.TakeDamage(info);
 
         // 触发命中回调（如果有）

@@ -18,9 +18,8 @@ public class Enemy_01_AttackState : HFSM_BaseState<E_Enemy01StateType, Enemy_01>
         timer = 0f;
         owner.Rb.velocity = new Vector2(0, owner.Rb.velocity.y); // 攻击时停下
 
-        // 查找并启用 Hitbox
-        if (hitbox == null)
-            hitbox = owner.GetComponentInChildren<AttackHitbox>(true);
+        // 启用 Hitbox
+        hitbox = owner.attackHitbox;
 
         if (hitbox != null)
         {

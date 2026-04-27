@@ -1,5 +1,8 @@
 using BehaviorDesigner.Runtime.Tasks;
 
+//死亡判断节点
+//boss血量百分比小于等于0，返回Failure，
+//boss血量大于0，返回success
 [TaskCategory("Boss/Boss01")]
 public class CheckBossHp_01 : Conditional
 {
@@ -11,7 +14,7 @@ public class CheckBossHp_01 : Conditional
     {
         if (boss.Value == null) return TaskStatus.Failure;
         float hpPercent = boss.Value.GetHPPercentage();
-        return (hpPercent >= minHP && hpPercent <= maxHP)
+        return (hpPercent <= 0)
             ? TaskStatus.Success
             : TaskStatus.Failure;
     }
