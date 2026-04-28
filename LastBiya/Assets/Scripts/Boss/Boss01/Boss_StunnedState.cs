@@ -19,6 +19,7 @@ public class Boss_StunnedState : HFSM_BaseState<E_BossStateType_01, Boss01>
     {
         timer = 0f;
         hasLanded = false;
+        owner.IsPostureLocked = true;
 
         // 清零速度，施加斜上方击退力
         owner.Rb.velocity = Vector2.zero;
@@ -62,7 +63,10 @@ public class Boss_StunnedState : HFSM_BaseState<E_BossStateType_01, Boss01>
 
         // 计时结束，强制韧性回满
         if (timer >= owner.stunnedDuration)
+        {
             owner.currentPosture = owner.maxPosture;
+            owner.IsPostureLocked = false;
+        }
     }
 
     public override void OnFixedUpdate()

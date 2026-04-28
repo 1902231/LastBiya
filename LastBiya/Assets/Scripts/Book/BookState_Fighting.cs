@@ -17,8 +17,6 @@ public class BookState_Fighting : HFSM_BaseState<E_BookStateType, BookCotroller>
 
     public override void OnUpdate()
     {
-        owner.MoveTowardsAnchor();
-
         // 有目标：重置超时计时，按间隔发射符文
         if (owner.TargetQueue.Count > 0)
         {

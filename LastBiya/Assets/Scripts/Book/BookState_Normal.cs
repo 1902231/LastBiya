@@ -5,8 +5,6 @@ public class BookState_Normal : HFSM_BaseState<E_BookStateType, BookCotroller>
 {
     public override void OnUpdate()
     {
-        owner.MoveTowardsAnchor();
-
         // 队列非空 → 切到 Fighting
         if (owner.TargetQueue.Count > 0)
         {

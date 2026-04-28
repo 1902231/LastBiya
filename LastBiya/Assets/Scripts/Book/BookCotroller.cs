@@ -21,6 +21,8 @@ public class BookCotroller : MonoBehaviour
     public float followSpeed = 4f;
     [Tooltip("跟随平滑度（越小越平滑）")]
     public float followSmoothTime = 0.1f;
+    [Tooltip("距离速度乘数除数（距离除以此值作为速度倍率）")]
+    public float followSpeedDistanceDivisor = 10f;
 
     [Header("战斗")]
     [Tooltip("追踪符文伤害")]
@@ -92,6 +94,12 @@ public class BookCotroller : MonoBehaviour
         AbilityMgr.Tick(Time.deltaTime);
     }
 
+    void LateUpdate()
+    {
+        // 跟随移动放在 LateUpdate，等玩家移动完成后再更新，避免抖动
+        MoveTowardsAnchor();
+    }
+
     public void EnqueueTarget(Transform target)
     {
         if (target != null)
@@ -117,7 +125,10 @@ public class BookCotroller : MonoBehaviour
     {
         Vector2 target = GetAnchorPosition();
         Vector2 current = transform.position;
-        transform.position = Vector2.SmoothDamp(current, target, ref velocity, followSmoothTime, followSpeed);
+        float distance = Vector2.Distance(current, target);
+        float speedMultiplier = distance / followSpeedDistanceDivisor;
+        float maxSpeed = followSpeed * Mathf.Max(1f, speedMultiplier);
+        transform.position = Vector2.SmoothDamp(current, target, ref velocity, followSmoothTime, maxSpeed);
     }
 
     void OnDrawGizmosSelected()

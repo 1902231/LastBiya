@@ -37,6 +37,7 @@ public class Boss_SlamDownState : HFSM_BaseState<E_BossStateType_01, Boss01>
             {
                 hasLanded = true;
                 DeactivateHitbox();
+                SpawnGroundProjectiles();
             }
         }
 
@@ -78,6 +79,32 @@ public class Boss_SlamDownState : HFSM_BaseState<E_BossStateType_01, Boss01>
         {
             owner.slamHitbox.gameObject.SetActive(false);
         }
+    }
+
+    private void SpawnGroundProjectiles()
+    {
+        if (owner.slamGroundProjectilePrefab == null) return;
+
+        // 向下射线找到地面位置
+        Vector2 origin = owner.transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, 5f, owner.slamProjectileWallLayer);
+        float groundY = hit.collider != null ? hit.point.y + 0.2f : origin.y;
+
+        Vector3 spawnPos = new Vector3(origin.x, groundY, 0f);
+
+        // 向左
+        var left = Object.Instantiate(owner.slamGroundProjectilePrefab, spawnPos, owner.slamGroundProjectilePrefab.transform.rotation);
+        var leftScript = left.GetComponent<BosssSlamGroundProjectile>();
+        if (leftScript != null)
+            leftScript.Initialize(-1, owner.slamProjectileSpeed, owner.slamProjectileDamage,
+                owner.slamProjectilePostureDamage, owner.slamProjectileWallCheckDistance, owner.slamProjectileWallLayer);
+
+        // 向右
+        var right = Object.Instantiate(owner.slamGroundProjectilePrefab, spawnPos, owner.slamGroundProjectilePrefab.transform.rotation);
+        var rightScript = right.GetComponent<BosssSlamGroundProjectile>();
+        if (rightScript != null)
+            rightScript.Initialize(1, owner.slamProjectileSpeed, owner.slamProjectileDamage,
+                owner.slamProjectilePostureDamage, owner.slamProjectileWallCheckDistance, owner.slamProjectileWallLayer);
     }
 
     /// <summary>

@@ -2,11 +2,14 @@ using UnityEngine;
 
 /// <summary>
 /// 飞起状态：飞到玩家头顶
+/// 速度由 AnimationCurve 根据飞行进度（距离百分比）控制
 /// 到达目标/超过高度上限/碰到墙壁时结束
 /// </summary>
 public class Boss_FlyUpState : HFSM_BaseState<E_BossStateType_01, Boss01>
 {
     private Vector2 targetPosition;
+    private Vector2 startPosition;
+    private float totalDistance;
     private bool isComplete;
 
     public Boss_FlyUpState()
@@ -19,6 +22,9 @@ public class Boss_FlyUpState : HFSM_BaseState<E_BossStateType_01, Boss01>
         targetPosition = owner.GetFlyUpTargetPosition();
         if (targetPosition.y > owner.flyUpMaxHeight)
             targetPosition.y = owner.flyUpMaxHeight;
+
+        startPosition = owner.transform.position;
+        totalDistance = Vector2.Distance(startPosition, targetPosition);
         isComplete = false;
         owner.Rb.gravityScale = 0f;
     }
@@ -43,8 +49,15 @@ public class Boss_FlyUpState : HFSM_BaseState<E_BossStateType_01, Boss01>
     {
         if (isComplete) return;
 
+        // 计算飞行进度（0~1）
+        float traveled = Vector2.Distance(startPosition, owner.transform.position);
+        float progress = totalDistance > 0 ? Mathf.Clamp01(traveled / totalDistance) : 1f;
+
+        // 从曲线采样速度倍率
+        float speedMultiplier = owner.flyUpSpeedCurve.Evaluate(progress);
+
         Vector2 direction = (targetPosition - (Vector2)owner.transform.position).normalized;
-        Vector2 targetVelocity = direction * owner.flyUpSpeed;
+        Vector2 targetVelocity = direction * owner.flyUpSpeed * speedMultiplier;
         Vector2 velocityDiff = targetVelocity - owner.Rb.velocity;
         owner.Rb.AddForce(velocityDiff * owner.moveAcceleration, ForceMode2D.Force);
     }

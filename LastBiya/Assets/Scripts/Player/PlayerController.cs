@@ -103,6 +103,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float DashPostureDamage = 3f;
     [Tooltip("冲刺反弹无敌持续时间")]
     public float DashBounceDuration = 0.3f;
+    [Tooltip("冲刺反弹期间输入叠加的水平力度")]
+    public float DashBounceAirControl = 20f;
 
     [Header("下落冲刺")]
     public float FallingDashSpeed = 30f;

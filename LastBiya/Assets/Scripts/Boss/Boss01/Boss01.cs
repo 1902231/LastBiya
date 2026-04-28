@@ -47,6 +47,8 @@ public class Boss01 : MonoBehaviour, IDamageable
     public float flyUpArriveDistance = 0.5f;
     [Tooltip("飞行高度上限（世界坐标Y值）")]
     public float flyUpMaxHeight = 15f;
+    [Tooltip("飞行速度曲线（X=飞行进度0~1，Y=速度倍率）")]
+    public AnimationCurve flyUpSpeedCurve = AnimationCurve.Linear(0, 1, 1, 1);
 
     [Header("下砸")]
     [Tooltip("下砸冲刺速度")]
@@ -55,6 +57,18 @@ public class Boss01 : MonoBehaviour, IDamageable
     public float slamDownDamage = 30f;
     [Tooltip("下砸到地面后的硬直时间")]
     public float slamDownRecoveryDuration = 0.8f;
+    [Tooltip("下砸贴地子弹预制体")]
+    public GameObject slamGroundProjectilePrefab;
+    [Tooltip("贴地子弹速度")]
+    public float slamProjectileSpeed = 12f;
+    [Tooltip("贴地子弹伤害")]
+    public float slamProjectileDamage = 10f;
+    [Tooltip("贴地子弹韧性伤害")]
+    public float slamProjectilePostureDamage = 5f;
+    [Tooltip("贴地子弹墙壁检测射线长度")]
+    public float slamProjectileWallCheckDistance = 0.5f;
+    [Tooltip("贴地子弹墙壁检测Layer")]
+    public LayerMask slamProjectileWallLayer;
 
     [Header("远程攻击")]
     [Tooltip("远程攻击前摇时间")]
@@ -284,11 +298,16 @@ public class Boss01 : MonoBehaviour, IDamageable
     }
 
     /// <summary>
+    /// 韧性是否被锁定（破防期间不可被攻击降低）
+    /// </summary>
+    public bool IsPostureLocked { get; set; }
+
+    /// <summary>
     /// 对躯干值造成伤害，返回是否破防
     /// </summary>
     public bool DamagePosture(float amount)
     {
-        if (IsPostureBroken) return false;
+        if (IsPostureBroken || IsPostureLocked) return false;
         currentPosture -= amount;
         if (currentPosture <= 0)
         {

@@ -40,7 +40,7 @@ public class PlayerState_DashBounce : HFSM_BaseState<E_PlayerStateType, PlayerCo
         float inputX = InputManager.Instance.MoveInput.x;
         if (inputX != 0)
         {
-            owner.Rb.AddForce(Vector2.right * inputX * owner.MoveAcceleration, ForceMode2D.Force);
+            owner.Rb.AddForce(Vector2.right * inputX * owner.DashBounceAirControl, ForceMode2D.Force);
         }
     }
 
