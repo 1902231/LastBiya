@@ -683,8 +683,8 @@ Camera:
   m_GameObject: {fileID: 388124457}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.06897472, g: 0.07883884, b: 0.09433961, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1422,8 +1422,8 @@ MonoBehaviour:
         byteData: 
         byteDataArray: 
       Version: 1.7.13
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
+  gizmoViewMode: 0
+  showBehaviorDesignerGizmo: 0
 --- !u!114 &687012232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1453,9 +1453,41 @@ MonoBehaviour:
   flyUpOffsetX: 0
   flyUpArriveDistance: 0.5
   flyUpMaxHeight: 15
+  flyUpSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -8.747498
+      value: 0.5048523
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   slamDownSpeed: 20
   slamDownDamage: 30
   slamDownRecoveryDuration: 0.8
+  slamGroundProjectilePrefab: {fileID: 2513005266489173287, guid: 90b08e11b58dfe640a516369a2234e5c, type: 3}
+  slamProjectileSpeed: 10
+  slamProjectileDamage: 10
+  slamProjectilePostureDamage: 0
+  slamProjectileWallCheckDistance: 0.5
+  slamProjectileWallLayer:
+    serializedVersion: 2
+    m_Bits: 0
   rangedWindupDuration: 0.6
   rangedRecoveryDuration: 0.4
   rangedProjectilePrefab: {fileID: 3165403800775064436, guid: 7442c63aaedd4324f990d9dd2564b968, type: 3}
@@ -2165,6 +2197,155 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1020754892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020754896}
+  - component: {fileID: 1020754895}
+  - component: {fileID: 1020754894}
+  - component: {fileID: 1020754893}
+  m_Layer: 11
+  m_Name: FlyBook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1020754893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020754892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28bbcd3f869c61c408bb851993b1d094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchorOffset: {x: -1, y: 1.5}
+  followSpeed: 4
+  followSmoothTime: 0.1
+  followSpeedDistanceDivisor: 2
+  runeDamage: 5
+  runePostureDamage: 3
+  runeHoverSpeed: 8
+  runeTrackSpeed: 14
+  runeTrackAcceleration: 20
+  runePauseDuration: 0.3
+  runeSpawnRange: 1
+  runePrefab: {fileID: 8796138320058511592, guid: 306b451ace645cb45bd3744511487078, type: 3}
+  fightingTimeout: 2
+  runeFireInterval: 0.15
+  runeHitEffect: {fileID: 0}
+  runeVanishEffect: {fileID: 0}
+--- !u!58 &1020754894
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020754892}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &1020754895
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020754892}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1020754896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020754892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.85, y: 0.93, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1056804411
 GameObject:
   m_ObjectHideFlags: 0
@@ -7956,6 +8137,7 @@ GameObject:
   - component: {fileID: 1064055068}
   - component: {fileID: 1064055067}
   - component: {fileID: 1064055066}
+  - component: {fileID: 1064055070}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -8022,6 +8204,7 @@ MonoBehaviour:
   DashBounceAngle: 30
   DashPostureDamage: 3
   DashBounceDuration: 0.3
+  DashBounceAirControl: 20
   FallingDashSpeed: 30
   FallingDashWindupDuration: 0.2
   FallingDashAngle: 60
@@ -8104,8 +8287,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
+  m_Offset: {x: -0.010763288, y: 0}
+  m_Size: {x: 1.1937406, y: 2}
   m_Direction: 0
 --- !u!212 &1064055069
 SpriteRenderer:
@@ -8148,9 +8331,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4fa0f76675bea894982515c3674dc346, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -8159,6 +8342,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1064055070
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064055064}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45667e9222f6b4a4398025135e713a73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1222814773
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,3 +10065,4 @@ SceneRoots:
   - {fileID: 687012236}
   - {fileID: 2067053405}
   - {fileID: 318218838}
+  - {fileID: 1020754896}
