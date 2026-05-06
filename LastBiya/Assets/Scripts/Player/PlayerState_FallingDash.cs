@@ -7,7 +7,6 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
     private AttackHitbox fallingDashHitbox;
     private float timer;
     private Phase currentPhase;
-    private BookCotroller bookCompanion;
 
     private enum Phase
     {
@@ -122,10 +121,8 @@ public class PlayerState_FallingDash : HFSM_BaseState<E_PlayerStateType, PlayerC
 
     private void OnFallingDashHit(Collider2D other)
     {
-        if (bookCompanion == null)
-            bookCompanion = Object.FindObjectOfType<BookCotroller>();
-        if (bookCompanion != null)
-            bookCompanion.EnqueueTarget(other.transform);
+        owner.Heal(owner.FallingDashLifeSteal);
+        EventCenter.Instance.EventTrigger("PlayerHitEnemy", other.transform);
     }
 
     private void FindFallingDashHitbox()

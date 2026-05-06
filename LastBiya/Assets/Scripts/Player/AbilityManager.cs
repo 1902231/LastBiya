@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// �����������ű�
-/// ��ʵ��֧�ֶ�Ability��ע�ᣬ���ң��޸��Լ����
+/// 能力系统脚本
+/// 负责注册，删除，启动ability
 /// </summary>
-/// <typeparam name="TAbilityType">ʹ�øù�������Ҫ����ö�٣���������Ability������</typeparam>
-/// <typeparam name="TOwner">�ù�������ʵ��ʹ����</typeparam>
+/// <typeparam name="TAbilityType">ability类型枚举的泛型</typeparam>
+/// <typeparam name="TOwner">使用者的类型的泛型</typeparam>
 public class AbilityManager<TAbilityType,TOwner>
 {
-    //�����ֵ�
+    //ability字典
     private Dictionary<TAbilityType, BaseAbility<TOwner>> abilityDic;
-    //��ǰ����������б�
+    //能力列表
     private List<BaseAbility<TOwner>> activeAbilities = new();
 
     public TOwner Owner;

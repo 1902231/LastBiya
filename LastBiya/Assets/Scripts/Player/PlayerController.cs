@@ -32,7 +32,7 @@ public enum E_PlayerAbilityType
     Invincible,
 }
 
-public class PlayerController : MonoBehaviour, IDamageable
+public class PlayerController : MonoBehaviour, IDamageable, IUnit
 {
     [Header("玩家战斗属性")]
 
@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float AttackRecoveryDuration = 0.2f;
     [Tooltip("普通攻击韧性伤害")]
     public float AttackPostureDamage = 5f;
+    [Tooltip("普通攻击命中回血")]
+    public float AttackLifeSteal = 2f;
 
     [Header("蓄力攻击属性")]
     [Tooltip("蓄力所需时间")]
@@ -73,6 +75,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float ChargeDamage = 30;
     [Tooltip("蓄力攻击韧性伤害")]
     public float ChargePostureDamage = 20f;
+    [Tooltip("蓄力攻击命中回血")]
+    public float ChargeLifeSteal = 5f;
 
     /// <summary>
     /// 最近一次受伤信息，供 Heart 状态读取
@@ -101,6 +105,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float DashBounceAngle = 30f;
     [Tooltip("冲刺韧性伤害")]
     public float DashPostureDamage = 3f;
+    [Tooltip("冲刺命中回血")]
+    public float DashLifeSteal = 1f;
     [Tooltip("冲刺反弹无敌持续时间")]
     public float DashBounceDuration = 0.3f;
     [Tooltip("冲刺反弹期间输入叠加的水平力度")]
@@ -117,6 +123,8 @@ public class PlayerController : MonoBehaviour, IDamageable
     public float FallingDashDamage = 15;
     [Tooltip("下冲韧性伤害")]
     public float FallingDashPostureDamage = 10f;
+    [Tooltip("下冲命中回血")]
+    public float FallingDashLifeSteal = 3f;
     [Tooltip("下冲最大持续时间")]
     public float FallingDashMaxDuration = 0.8f;
     [Tooltip("下冲二段水平滑行力度")]
@@ -160,6 +168,13 @@ public class PlayerController : MonoBehaviour, IDamageable
 
 
     public Rigidbody2D Rb { get; private set; }
+
+    // IUnit 实现
+    public string UnitName => "Player";
+    public float CurrentHP => currentHP;
+    public float MaxHP => maxHP;
+    public float CurrentPosture => 0f;
+    public float MaxPosture => 0f;
 
     /// <summary>
     /// 玩家当前朝向，1 = 右，-1 = 左
@@ -263,6 +278,8 @@ public class PlayerController : MonoBehaviour, IDamageable
         AbilityMgr.Tick(Time.deltaTime);
 
         Debug.Log("玩家当前状态：" + playerFsm.currentState);
+
+        Debug.Log($"fixedDeltaTime: {Time.fixedDeltaTime}, timeScale: {Time.timeScale}");
     }
 
     private void FixedUpdate()
@@ -330,6 +347,15 @@ public class PlayerController : MonoBehaviour, IDamageable
     public bool IsInvincible { get; set; }
 
     /// <summary>
+    /// 回血
+    /// </summary>
+    public void Heal(float amount)
+    {
+        currentHP = Mathf.Min(currentHP + amount, maxHP);
+        EventCenter.Instance.EventTrigger<IUnit>("HPChanged", this);
+    }
+
+    /// <summary>
     /// IDamageable 实现：受到伤害时调用
     /// 扣血 → 存储伤害信息 → 通过事件中心通知状态机
     /// </summary>
@@ -341,6 +367,7 @@ public class PlayerController : MonoBehaviour, IDamageable
 
         currentHP -= info.damage;
         LastDamageInfo = info;
+        EventCenter.Instance.EventTrigger<IUnit>("HPChanged", this);
         EventCenter.Instance.EventTrigger<DamageInfo>("PlayerHurt", info);
     }
 

@@ -60,12 +60,14 @@ public class Boss_StunnedState : HFSM_BaseState<E_BossStateType_01, Boss01>
             owner.currentPosture + recoveryRate * Time.deltaTime,
             owner.maxPosture
         );
+        EventCenter.Instance.EventTrigger<IUnit>("PostureChanged", owner);
 
         // 计时结束，强制韧性回满
         if (timer >= owner.stunnedDuration)
         {
             owner.currentPosture = owner.maxPosture;
             owner.IsPostureLocked = false;
+            EventCenter.Instance.EventTrigger<IUnit>("PostureChanged", owner);
         }
     }
 

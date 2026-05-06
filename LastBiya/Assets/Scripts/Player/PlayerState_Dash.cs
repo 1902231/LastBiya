@@ -8,7 +8,6 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
     private float originalGravity;
     private AttackHitbox dashHitbox;
     private bool hasBounced;
-    private BookCotroller bookCompanion;
     public PlayerState_Dash()
     {
         this.parentType = E_PlayerStateType.Alive;
@@ -82,11 +81,9 @@ public class PlayerState_Dash : HFSM_BaseState<E_PlayerStateType, PlayerControll
     /// </summary>
     private void OnDashHit(Collider2D other)
     {
-        // 通知飞书
-        if (bookCompanion == null)
-            bookCompanion = Object.FindObjectOfType<BookCotroller>();
-        if (bookCompanion != null)
-            bookCompanion.EnqueueTarget(other.transform);
+        // 回血 + 广播事件
+        owner.Heal(owner.DashLifeSteal);
+        EventCenter.Instance.EventTrigger("PlayerHitEnemy", other.transform);
 
         if (hasBounced) return;
         hasBounced = true;

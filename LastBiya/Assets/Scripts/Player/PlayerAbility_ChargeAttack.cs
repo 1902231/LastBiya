@@ -11,7 +11,6 @@ public class PlayerAbility_ChargeAttack : BaseAbility<PlayerController>
     private float releaseTimer;
     private bool isReleased;
     private AttackHitbox chargeHitbox;
-    private BookCotroller bookCompanion;
 
     public PlayerAbility_ChargeAttack()
     {
@@ -99,10 +98,8 @@ public class PlayerAbility_ChargeAttack : BaseAbility<PlayerController>
 
     private void OnChargeHit(Collider2D other)
     {
-        if (bookCompanion == null)
-            bookCompanion = Object.FindObjectOfType<BookCotroller>();
-        if (bookCompanion != null)
-            bookCompanion.EnqueueTarget(other.transform);
+        owner.Heal(owner.ChargeLifeSteal);
+        EventCenter.Instance.EventTrigger("PlayerHitEnemy", other.transform);
     }
 
     private void FindChargeHitbox()

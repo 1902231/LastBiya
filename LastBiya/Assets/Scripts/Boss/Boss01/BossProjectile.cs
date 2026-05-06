@@ -29,7 +29,7 @@ public class BossProjectile : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        hitbox = GetComponent<AttackHitbox>();
+        hitbox = GetComponentInChildren<AttackHitbox>(true);
     }
 
     /// <summary>
@@ -128,5 +128,9 @@ public class BossProjectile : MonoBehaviour
     {
         isReturning = true;
         isStopped = false;
+
+        // 重置命中记录，返回途中可以再次造成伤害
+        if (hitbox != null)
+            hitbox.ResetHitRecord();
     }
 }
