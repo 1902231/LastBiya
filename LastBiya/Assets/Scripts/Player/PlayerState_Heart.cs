@@ -25,7 +25,6 @@ public class PlayerState_Heart : HFSM_BaseState<E_PlayerStateType, PlayerControl
 
         // 顿帧：冻结时间
         Time.timeScale = owner.HurtTimeScale;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
         // 冻结玩家速度
         owner.Rb.velocity = Vector2.zero;
@@ -44,7 +43,6 @@ public class PlayerState_Heart : HFSM_BaseState<E_PlayerStateType, PlayerControl
 
                 // 恢复时间
                 Time.timeScale = 1f;
-                Time.fixedDeltaTime = 0.02f;
 
                 // 施加击退力（水平 + 向上抛起）
                 var info = owner.LastDamageInfo;
@@ -70,6 +68,5 @@ public class PlayerState_Heart : HFSM_BaseState<E_PlayerStateType, PlayerControl
     {
         // 安全兜底
         Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f;
     }
 }

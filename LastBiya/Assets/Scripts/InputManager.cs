@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour
     public InputAction DashAction { get; private set; }
     public InputAction FallingDashAction { get; private set; }
     public InputAction ChargeAttackAction { get; private set; }
+    public InputAction UseItemAction { get; private set; }
 
     // —— 输入缓冲 ——
     [Header("输入缓冲")]
@@ -56,6 +57,7 @@ public class InputManager : MonoBehaviour
         DashAction   = playerNormalMap.FindAction("Dash");
         FallingDashAction = playerNormalMap.FindAction("FallingDash");
         ChargeAttackAction = playerNormalMap.FindAction("ChargeAttack");
+        UseItemAction = playerNormalMap.FindAction("UseItem");
 
         // 注册需要缓冲的 Action（Move 是 Value 类型，不需要缓冲）
         // Dash 不加缓冲，避免下冲落地后自动接普通冲刺

@@ -86,6 +86,9 @@ public class BookCotroller : MonoBehaviour
         AbilityMgr.AddAbilities(E_BookAbilityType.RuneAttack, runeAttack);
 
         StateMachine.SwitchState(E_BookStateType.Normal);
+
+        // 订阅玩家命中敌人事件
+        EventCenter.Instance.AddEventListener<Transform>("PlayerHitEnemy", EnqueueTarget);
     }
 
     void Update()
@@ -129,6 +132,11 @@ public class BookCotroller : MonoBehaviour
         float speedMultiplier = distance / followSpeedDistanceDivisor;
         float maxSpeed = followSpeed * Mathf.Max(1f, speedMultiplier);
         transform.position = Vector2.SmoothDamp(current, target, ref velocity, followSmoothTime, maxSpeed);
+    }
+
+    void OnDestroy()
+    {
+        EventCenter.Instance.RemoveEventListener<Transform>("PlayerHitEnemy", EnqueueTarget);
     }
 
     void OnDrawGizmosSelected()

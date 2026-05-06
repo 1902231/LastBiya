@@ -4,8 +4,10 @@ using UnityEngine;
 /// Boss 控制器
 /// 使用 HFSM 管理状态执行，通过 Behavior Designer 控制状态切换决策
 /// </summary>
-public class Boss01 : MonoBehaviour, IDamageable
+public class Boss01 : MonoBehaviour, IDamageable, IUnit
 {
+    [Header("基本信息")]
+    public string bossName = "Boss01";
     [Header("生命值")]
     public float maxHP = 500;
     public float currentHP;
@@ -93,6 +95,12 @@ public class Boss01 : MonoBehaviour, IDamageable
     public AttackHitbox slashHitbox;
     [Tooltip("下砸攻击 Hitbox（下方纵向判定）")]
     public AttackHitbox slamHitbox;
+    [Tooltip("碰撞伤害 Hitbox（持续激活）")]
+    public AttackHitbox contactHitbox;
+
+    [Header("碰撞伤害")]
+    [Tooltip("碰撞伤害值")]
+    public float contactDamage = 10f;
 
     [Header("受击")]
     [Tooltip("受击击退力度")]
@@ -119,6 +127,13 @@ public class Boss01 : MonoBehaviour, IDamageable
     
     // 地面检测
     public bool IsGrounded { get; private set; }
+
+    // IUnit 实现
+    public string UnitName => bossName;
+    public float CurrentHP => currentHP;
+    public float MaxHP => maxHP;
+    public float CurrentPosture => currentPosture;
+    public float MaxPosture => maxPosture;
 
     // 状态机
     public HFSM<E_BossStateType_01, Boss01> StateMachine { get; private set; }
@@ -150,6 +165,15 @@ public class Boss01 : MonoBehaviour, IDamageable
         StateMachine.AddState(E_BossStateType_01.Dead,          new Boss_DeadState());
 
         StateMachine.SwitchState(E_BossStateType_01.Alive);
+
+        // 碰撞伤害 hitbox 持续激活
+        if (contactHitbox != null)
+        {
+            contactHitbox.damage = (int)contactDamage;
+            contactHitbox.gameObject.SetActive(true);
+        }
+
+       
     }
 
     void Update()
@@ -312,8 +336,10 @@ public class Boss01 : MonoBehaviour, IDamageable
         if (currentPosture <= 0)
         {
             currentPosture = 0;
+            EventCenter.Instance.EventTrigger<IUnit>("PostureChanged", this);
             return true;
         }
+        EventCenter.Instance.EventTrigger<IUnit>("PostureChanged", this);
         return false;
     }
 
@@ -347,6 +373,8 @@ public class Boss01 : MonoBehaviour, IDamageable
     {
         currentHP -= info.damage;
         LastDamageInfo = info;
+
+        EventCenter.Instance.EventTrigger<IUnit>("HPChanged", this);
 
         // 韧性伤害
         if (info.postureDamage > 0)

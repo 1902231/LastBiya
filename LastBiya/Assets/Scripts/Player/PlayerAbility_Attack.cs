@@ -14,7 +14,6 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
     private AttackHitbox hitbox;
     private float elapsed;
     private bool isInRecovery;
-    private BookCotroller bookCompanion;
 
     public PlayerAbility_Attack()
     {
@@ -92,10 +91,7 @@ public class PlayerAbility_Attack : BaseAbility<PlayerController>
 
     private void OnAttackHit(Collider2D other)
     {
-        // 通知飞书辅助机
-        if (bookCompanion == null)
-            bookCompanion = Object.FindObjectOfType<BookCotroller>();
-        if (bookCompanion != null)
-            bookCompanion.EnqueueTarget(other.transform);
+        owner.Heal(owner.AttackLifeSteal);
+        EventCenter.Instance.EventTrigger("PlayerHitEnemy", other.transform);
     }
 }
