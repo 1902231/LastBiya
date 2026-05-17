@@ -79,7 +79,8 @@ public class Enemy_02 : MonoBehaviour, IDamageable
 
     public bool HasWallAhead(int direction)
     {
-        Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
+        // 射线起点需要根据方向调整 X 偏移
+        Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x * direction, wallCheckOffset.y);
         Vector2 rayDir = new Vector2(direction, 0);
         return Physics2D.Raycast(origin, rayDir, wallCheckDistance, groundLayer);
     }
@@ -97,6 +98,7 @@ public class Enemy_02 : MonoBehaviour, IDamageable
 
     void OnDrawGizmosSelected()
     {
+        // 绘制平台边缘检测射线（斜向下）
         Gizmos.color = Color.cyan;
         for (int dir = -1; dir <= 1; dir += 2)
         {
@@ -106,10 +108,12 @@ public class Enemy_02 : MonoBehaviour, IDamageable
             Gizmos.DrawRay(origin, rayDir * edgeCheckDistance);
         }
 
+        // 绘制墙壁检测射线（水平）
         Gizmos.color = Color.magenta;
         for (int dir = -1; dir <= 1; dir += 2)
         {
-            Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x, wallCheckOffset.y);
+            // 修复：X 偏移也需要根据方向调整
+            Vector2 origin = (Vector2)transform.position + new Vector2(wallCheckOffset.x * dir, wallCheckOffset.y);
             Gizmos.DrawRay(origin, new Vector2(dir, 0) * wallCheckDistance);
         }
     }

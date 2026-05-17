@@ -1,10 +1,11 @@
 using UnityEngine;
+using BehaviorDesigner.Runtime;
 
 /// <summary>
 /// Boss 控制器
 /// 使用 HFSM 管理状态执行，通过 Behavior Designer 控制状态切换决策
 /// </summary>
-public class Boss01 : MonoBehaviour, IDamageable, IUnit
+public class Boss01 : MonoBehaviour, IDamageable, IUnit, IBoss
 {
     [Header("基本信息")]
     public string bossName = "Boss01";
@@ -141,6 +142,24 @@ public class Boss01 : MonoBehaviour, IDamageable, IUnit
     // 当前状态类型（用于 Behavior Designer 查询）
     private E_BossStateType_01 currentStateType;
 
+    // IBoss 实现
+    public string BossID => bossName;
+    public bool IsDead => currentHP <= 0;
+    public Transform Transform => transform;
+    
+    private BehaviorTree behaviorTree;
+    private Animator animator;
+
+    void Awake()
+    {
+        behaviorTree = GetComponent<BehaviorTree>();
+        animator = GetComponent<Animator>();
+        
+        // 默认禁用行为树，由 BossBattleManager 启动
+        if (behaviorTree != null)
+            behaviorTree.DisableBehavior();
+    }
+
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
@@ -172,8 +191,52 @@ public class Boss01 : MonoBehaviour, IDamageable, IUnit
             contactHitbox.damage = (int)contactDamage;
             contactHitbox.gameObject.SetActive(true);
         }
-
-       
+    }
+    
+    // ========== IBoss 接口实现 ==========
+    
+    /// <summary>
+    /// 启动 Boss 战斗逻辑（启动行为树）
+    /// </summary>
+    public void StartCombat()
+    {
+        if (behaviorTree != null)
+        {
+            behaviorTree.EnableBehavior();
+            Debug.Log($"[{bossName}] 行为树已启动");
+        }
+        else
+        {
+            Debug.LogWarning($"[{bossName}] 未找到 Behavior Tree 组件！");
+        }
+    }
+    
+    /// <summary>
+    /// 停止 Boss 战斗逻辑（停止行为树）
+    /// </summary>
+    public void StopCombat()
+    {
+        if (behaviorTree != null)
+        {
+            behaviorTree.DisableBehavior();
+            Debug.Log($"[{bossName}] 行为树已停止");
+        }
+    }
+    
+    /// <summary>
+    /// 播放开场动画
+    /// </summary>
+    /// <returns>动画时长（秒）</returns>
+    public float PlayIntroAnimation()
+    {
+        if (animator != null)
+        {
+            // TODO: 替换为实际的开场动画名称
+            // animator.Play("Boss_Intro");
+            Debug.Log($"[{bossName}] 播放开场动画");
+            return 3f; // 返回动画时长
+        }
+        return 0f;
     }
 
     void Update()

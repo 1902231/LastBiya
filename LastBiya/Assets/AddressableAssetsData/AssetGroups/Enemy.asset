@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Enemy
+  m_EditorClassIdentifier: 
+  m_GroupName: Enemy
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f9f0c384a71e2e04fa2beccae193b744
+  m_SerializeEntries:
+  - m_GUID: 419429a9774f90a47a68c90d16dd644f
+    m_Address: Assets/Perfabs/UI/Enemy/Enemy_01_Test.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e0bd9d19769aa3741815b346a23a0c6d
+    m_Address: Assets/Perfabs/UI/Enemy/Enemy_03_Test.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9079691127338046a91ba666c296ac0
+    m_Address: Assets/Perfabs/UI/Enemy/Enemy_02_Test.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 9e464bac2673fe146a3951fb3c3f3770, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d0a1a4dfb2ead254ea072e2ac808a80b, type: 2}
+    - {fileID: 11400000, guid: 9693c4e4ea7b08443850661693a0e133, type: 2}

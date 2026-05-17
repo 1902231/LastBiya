@@ -69,6 +69,13 @@ public class InputManager : MonoBehaviour
         playerNormalMap.Enable();
     }
 
+    void Start()
+    {
+        // 监听输入控制事件
+        EventCenter.Instance.AddEventListener("DisablePlayerInput", OnDisablePlayerInput);
+        EventCenter.Instance.AddEventListener("EnablePlayerInput", OnEnablePlayerInput);
+    }
+
     void Update()
     {
         // 统一遍历：倒计时 + 检测按下
@@ -100,9 +107,34 @@ public class InputManager : MonoBehaviour
         // uiMap?.Disable();
         // dialogueMap?.Disable();
 
+        // 移除事件监听
+        if (EventCenter.Instance != null)
+        {
+            EventCenter.Instance.RemoveEventListener("DisablePlayerInput", OnDisablePlayerInput);
+            EventCenter.Instance.RemoveEventListener("EnablePlayerInput", OnEnablePlayerInput);
+        }
+
         // 如果是当前单例被销毁，清空引用
         if (Instance == this)
             Instance = null;
+    }
+
+    /// <summary>
+    /// 响应禁用玩家输入事件
+    /// </summary>
+    private void OnDisablePlayerInput()
+    {
+        playerNormalMap?.Disable();
+        Debug.Log("[InputManager] 玩家输入已禁用");
+    }
+
+    /// <summary>
+    /// 响应启用玩家输入事件
+    /// </summary>
+    private void OnEnablePlayerInput()
+    {
+        playerNormalMap?.Enable();
+        Debug.Log("[InputManager] 玩家输入已启用");
     }
 
     // public void SwitchToPlayerNormal()

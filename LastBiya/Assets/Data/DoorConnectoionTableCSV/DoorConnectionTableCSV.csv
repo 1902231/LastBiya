@@ -1,0 +1,8 @@
+﻿RoomID,DoorID,TargetRoomID,TargetRoomID
+#===Room01所有的门===,,,
+Room_01,Right_01,Room_02,Left_01
+#===Room02所有的门===,,,
+Room_02,Left_01,Room_01,Right_01
+Room_02,Right_01,Room_03,Left_01
+#===Room03所有的门===,,,
+Room_03,Left_01,Room_02,Right_01

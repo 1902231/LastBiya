@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 /// <summary>
 /// Boss UI View：血条 + 架势条（各带缓冲）+ Boss 名称
@@ -16,7 +18,15 @@ public class BossUIView : MonoBehaviour
     public Image bossPostureBuffer;
 
     [Header("名称")]
-    public Text bossNameText;
+    public TextMeshProUGUI bossNameText;
+    
+    [Header("Boss 标题（开场大字）")]
+    public TextMeshProUGUI bossTitleText;
+    public CanvasGroup titleCanvasGroup;
+    [Tooltip("标题淡入时长")]
+    public float titleFadeInDuration = 0.8f;
+    [Tooltip("标题淡出时长")]
+    public float titleFadeOutDuration = 0.5f;
 
     [Header("缓冲设置")]
     [Tooltip("缓冲条延迟追赶时间")]
@@ -31,6 +41,15 @@ public class BossUIView : MonoBehaviour
     // 架势条缓冲
     private float postureDelayTimer;
     private bool isPostureChasing;
+
+    void Awake()
+    {
+        // 初始化：隐藏 Boss 标题
+        if (titleCanvasGroup != null)
+        {
+            titleCanvasGroup.gameObject.SetActive(false);
+        }
+    }
 
     public void SetBossName(string name)
     {
@@ -63,6 +82,58 @@ public class BossUIView : MonoBehaviour
         bossHpBuffer.fillAmount = 1f;
         bossPosture.fillAmount = 1f;
         bossPostureBuffer.fillAmount = 1f;
+    }
+    
+    /// <summary>
+    /// 显示血条和架势条（不包括标题）
+    /// </summary>
+    public void ShowHealthBars()
+    {
+        if (bossHp != null) bossHp.transform.parent.gameObject.SetActive(true);
+        if (bossPosture != null) bossPosture.transform.parent.gameObject.SetActive(true);
+        if (bossNameText != null) bossNameText.gameObject.SetActive(true);
+    }
+    
+    /// <summary>
+    /// 隐藏血条和架势条（不包括标题）
+    /// </summary>
+    public void HideHealthBars()
+    {
+        if (bossHp != null) bossHp.transform.parent.gameObject.SetActive(false);
+        if (bossPosture != null) bossPosture.transform.parent.gameObject.SetActive(false);
+        if (bossNameText != null) bossNameText.gameObject.SetActive(false);
+    }
+    
+    /// <summary>
+    /// 显示 Boss 标题（大字，开场时显示）
+    /// </summary>
+    public void ShowTitle(string title)
+    {
+        if (bossTitleText == null || titleCanvasGroup == null)
+        {
+            Debug.LogWarning("BossUIView: Boss 标题组件未设置！");
+            return;
+        }
+        
+        bossTitleText.text = title;
+        titleCanvasGroup.gameObject.SetActive(true);
+        
+        // DOTween 淡入
+        titleCanvasGroup.alpha = 0f;
+        titleCanvasGroup.DOFade(1f, titleFadeInDuration).SetEase(Ease.OutQuad);
+    }
+    
+    /// <summary>
+    /// 隐藏 Boss 标题
+    /// </summary>
+    public void HideTitle()
+    {
+        if (titleCanvasGroup == null) return;
+        
+        // DOTween 淡出
+        titleCanvasGroup.DOFade(0f, titleFadeOutDuration).SetEase(Ease.InQuad).OnComplete(() => {
+            titleCanvasGroup.gameObject.SetActive(false);
+        });
     }
 
     void Update()

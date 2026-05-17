@@ -17,10 +17,60 @@ public class BossUIController : MonoBehaviour
     {
         EventCenter.Instance.AddEventListener<IUnit>("HPChanged", OnHPChanged);
         EventCenter.Instance.AddEventListener<IUnit>("PostureChanged", OnPostureChanged);
+        
+        // 监听开场完成事件（显示血条）
+        EventCenter.Instance.AddEventListener<IUnit>("BossIntroComplete", OnBossIntroComplete);
+        
+        // 监听标题显示/隐藏事件
+        EventCenter.Instance.AddEventListener<string>("ShowBossTitle", OnShowBossTitle);
+        EventCenter.Instance.AddEventListener("HideBossTitle", OnHideBossTitle);
+        
+        // 监听退出事件
+        EventCenter.Instance.AddEventListener<IUnit>("BossExited", OnBossExited);
 
-        // 如果 Inspector 里拖了 Boss，自动绑定
+        // 如果 Inspector 里拖了 Boss，自动绑定（向后兼容，测试用）
         if (bossReference != null && bossReference is IUnit unit)
+        {
             BindBoss(unit);
+        }
+        else
+        {
+            // 初始隐藏血条和架势条，但保持 GameObject 激活以便显示标题
+            view.HideHealthBars();
+        }
+    }
+    
+    /// <summary>
+    /// Boss 开场动画完成后显示血条
+    /// </summary>
+    private void OnBossIntroComplete(IUnit boss)
+    {
+        BindBoss(boss);
+    }
+    
+    /// <summary>
+    /// 显示 Boss 标题（大字，开场时显示）
+    /// </summary>
+    private void OnShowBossTitle(string bossName)
+    {
+        view.ShowTitle(bossName);
+    }
+    
+    /// <summary>
+    /// 隐藏 Boss 标题
+    /// </summary>
+    private void OnHideBossTitle()
+    {
+        view.HideTitle();
+    }
+    
+    /// <summary>
+    /// Boss 离开场景时自动解绑
+    /// </summary>
+    private void OnBossExited(IUnit boss)
+    {
+        if (boss == currentBoss)
+            UnbindBoss();
     }
 
     /// <summary>
@@ -31,7 +81,7 @@ public class BossUIController : MonoBehaviour
         currentBoss = boss;
         view.SetBossName(boss.UnitName);
         view.InitFull();
-        gameObject.SetActive(true);
+        view.ShowHealthBars();  // 显示血条和架势条
     }
 
     /// <summary>
@@ -40,7 +90,7 @@ public class BossUIController : MonoBehaviour
     public void UnbindBoss()
     {
         currentBoss = null;
-        gameObject.SetActive(false);
+        view.HideHealthBars();  // 隐藏血条和架势条
     }
 
     private void OnHPChanged(IUnit unit)
@@ -60,5 +110,9 @@ public class BossUIController : MonoBehaviour
     {
         EventCenter.Instance.RemoveEventListener<IUnit>("HPChanged", OnHPChanged);
         EventCenter.Instance.RemoveEventListener<IUnit>("PostureChanged", OnPostureChanged);
+        EventCenter.Instance.RemoveEventListener<IUnit>("BossIntroComplete", OnBossIntroComplete);
+        EventCenter.Instance.RemoveEventListener<string>("ShowBossTitle", OnShowBossTitle);
+        EventCenter.Instance.RemoveEventListener("HideBossTitle", OnHideBossTitle);
+        EventCenter.Instance.RemoveEventListener<IUnit>("BossExited", OnBossExited);
     }
 }

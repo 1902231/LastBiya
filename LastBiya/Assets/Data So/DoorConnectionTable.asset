@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 674ec25d01c906241867439541bdd40a, type: 3}
+  m_Name: DoorConnectionTable
+  m_EditorClassIdentifier: 
+  connections:
+  - fromRoomID: Room_01
+    fromDoorID: Right_01
+    toRoomID: Room_02
+    toDoorID: Left_01
+  - fromRoomID: Room_02
+    fromDoorID: Left_01
+    toRoomID: Room_01
+    toDoorID: Right_01
+  - fromRoomID: Room_02
+    fromDoorID: Right_01
+    toRoomID: Room_03
+    toDoorID: Left_01
+  - fromRoomID: Room_03
+    fromDoorID: Left_01
+    toRoomID: Room_02
+    toDoorID: Right_01
