@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\transition\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\transition\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AB3D41B3-772F-2116-3F29-6E413F52400E}|Assembly-CSharp-Editor.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\editor\\doorconnectionimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AB3D41B3-772F-2116-3F29-6E413F52400E}|Assembly-CSharp-Editor.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\editor\\doorconnectionimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AB3D41B3-772F-2116-3F29-6E413F52400E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\scripts\\editor\\doorconnectionimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\scriptableobject\\doorconnectionstableso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobject\\doorconnectionstableso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\scriptableobject\\gamesceneso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobject\\gamesceneso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\transition\\doordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\doordata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\transition\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\sceneloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\transition\\sceneloaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\sceneloaddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\ui\\fadecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\fadecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|e:\\unityproject\\documents github\\lastbiya\\lastbiya\\assets\\scripts\\transition\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\scriptableobject\\gamesceneso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scriptableobject\\gamesceneso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\ui\\fadecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\fadecanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03804411-E560-CE84-71E6-505433F580FF}|Assembly-CSharp.csproj|E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\assets\\scripts\\eventcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -214,11 +218,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "HFSM.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HFSM.cs",
@@ -231,7 +235,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "AbilityManager.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\AbilityManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\AbilityManager.cs",
@@ -244,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "PlayerInputHandler.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerInputHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInputHandler.cs",
@@ -253,7 +257,45 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-21T10:30:18.411Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SceneLoadData.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoadData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\SceneLoadData.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoadData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\SceneLoadData.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-17T06:28:11.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SceneLoader.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\SceneLoader.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\SceneLoader.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAApwCMBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T12:05:50.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoorData.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\DoorData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\DoorData.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\DoorData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\DoorData.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T13:01:04.577Z",
               "EditorCaption": ""
             },
             {
@@ -264,50 +306,66 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Editor\\DoorConnectionImporter.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Editor\\DoorConnectionImporter.cs",
               "RelativeToolTip": "Assets\\Scripts\\Editor\\DoorConnectionImporter.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwDMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAL0AAAAAAAAAAAAcwPYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T13:42:35.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DoorData.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\DoorData.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\DoorData.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\DoorData.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Transition\\DoorData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T13:01:04.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "GameSceneSO.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\GameSceneSO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObject\\GameSceneSO.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\GameSceneSO.cs",
               "RelativeToolTip": "Assets\\Scripts\\ScriptableObject\\GameSceneSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T11:56:23.142Z"
+              "WhenOpened": "2026-05-13T11:56:23.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
+              "Title": "Door.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\Door.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\Door.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\Door.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\Door.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwCIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T13:18:14.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DoorConnectionsTableSO.cs",
+              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
+              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwBAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T13:08:40.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
               "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AgIAACABAAAAAAAAAAAAABkBAABZAAAAAAAAAA==",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAowBkBAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T10:35:01.507Z"
+              "WhenOpened": "2026-04-16T10:35:01.507Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "FadeCanvas.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\FadeCanvas.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\FadeCanvas.cs",
@@ -319,44 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SceneLoader.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\SceneLoader.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\SceneLoader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Transition\\SceneLoader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T12:05:50.145Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Door.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\Door.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\Door.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Transition\\Door.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Transition\\Door.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T13:18:14.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DoorConnectionsTableSO.cs",
-              "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
-              "ToolTip": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ScriptableObject\\DoorConnectionsTableSO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T13:08:40.764Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "EventCenter.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\EventCenter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EventCenter.cs",
@@ -368,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PlayerUIController.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\Game\\PlayerUIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Game\\PlayerUIController.cs",
@@ -380,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Enemy_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Enemy\\Enemy_01.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_01.cs",
@@ -392,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "InputManager.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\InputManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\InputManager.cs",
@@ -404,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Boss01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Boss\\Boss01\\Boss01.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boss\\Boss01\\Boss01.cs",
@@ -416,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "InputControlPathEditor.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Library\\PackageCache\\com.unity.inputsystem@1.14.2\\InputSystem\\Editor\\ControlPicker\\InputControlPathEditor.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.inputsystem@1.14.2\\InputSystem\\Editor\\ControlPicker\\InputControlPathEditor.cs",
@@ -424,11 +445,12 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.inputsystem@1.14.2\\InputSystem\\Editor\\ControlPicker\\InputControlPathEditor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowHMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-29T11:53:20.876Z"
+              "WhenOpened": "2026-04-29T11:53:20.876Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BossUIView.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\Game\\BossUIView.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Game\\BossUIView.cs",
@@ -440,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "BossUIController.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\Game\\BossUIController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Game\\BossUIController.cs",
@@ -452,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "PlayerUIView.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\Game\\PlayerUIView.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Game\\PlayerUIView.cs",
@@ -464,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "UIManager.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIManager.cs",
@@ -476,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BasePanel.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\UI\\BasePanel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\BasePanel.cs",
@@ -488,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "BosssSlamGroundProjectile.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Boss\\Boss01\\BosssSlamGroundProjectile.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Boss\\Boss01\\BosssSlamGroundProjectile.cs",
@@ -500,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "StopBehaviorTree.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Behavior Designer\\Runtime\\Tasks\\Actions\\StopBehaviorTree.cs",
               "RelativeDocumentMoniker": "Assets\\Behavior Designer\\Runtime\\Tasks\\Actions\\StopBehaviorTree.cs",
@@ -512,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "CheckBossPosature_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\BehaviorNotes\\CheckBossPosature_01.cs",
               "RelativeDocumentMoniker": "Assets\\BehaviorNotes\\CheckBossPosature_01.cs",
@@ -524,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "CheckBossHp_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\BehaviorNotes\\CheckBossHp_01.cs",
               "RelativeDocumentMoniker": "Assets\\BehaviorNotes\\CheckBossHp_01.cs",
@@ -536,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Enemy_03_DeadState.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Enemy\\Enemy_03_DeadState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_03_DeadState.cs",
@@ -548,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "BookCotroller.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Book\\BookCotroller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Book\\BookCotroller.cs",
@@ -560,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "WaitForStateComplete_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\BehaviorNotes\\WaitForStateComplete_01.cs",
               "RelativeDocumentMoniker": "Assets\\BehaviorNotes\\WaitForStateComplete_01.cs",
@@ -572,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "FloatComparison.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Behavior Designer\\Runtime\\Tasks\\Unity\\Math\\FloatComparison.cs",
               "RelativeDocumentMoniker": "Assets\\Behavior Designer\\Runtime\\Tasks\\Unity\\Math\\FloatComparison.cs",
@@ -584,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "CompareSharedFloat.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Behavior Designer\\Runtime\\Tasks\\Unity\\SharedVariables\\CompareSharedFloat.cs",
               "RelativeDocumentMoniker": "Assets\\Behavior Designer\\Runtime\\Tasks\\Unity\\SharedVariables\\CompareSharedFloat.cs",
@@ -596,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "CheckBossDeriction_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\BehaviorNotes\\CheckBossDeriction_01.cs",
               "RelativeDocumentMoniker": "Assets\\BehaviorNotes\\CheckBossDeriction_01.cs",
@@ -608,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "SwitchBossState_01.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\BehaviorNotes\\SwitchBossState_01.cs",
               "RelativeDocumentMoniker": "Assets\\BehaviorNotes\\SwitchBossState_01.cs",
@@ -620,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Enemy_03_HurtState.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Enemy\\Enemy_03_HurtState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Enemy_03_HurtState.cs",
@@ -632,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "PlayerAbility_FallingDash.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_FallingDash.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAbility_FallingDash.cs",
@@ -644,7 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "AttackHitbox.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\AttackHitbox.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\AttackHitbox.cs",
@@ -656,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "DamageInfo.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Combat\\DamageInfo.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\DamageInfo.cs",
@@ -668,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "PlayerAbility_DoubleJump.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAbility_DoubleJump.cs",
@@ -680,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "PlayerState_Alive.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Alive.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Alive.cs",
@@ -692,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "PlayerState_Heart.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Heart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Heart.cs",
@@ -704,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "PlayerState_FallingDash.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_FallingDash.cs",
@@ -716,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "PlayerState_AirBornd.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_AirBornd.cs",
@@ -728,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "PlayerState_Grounded.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Grounded.cs",
@@ -740,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "PlayerAbility_Attack.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAbility_Attack.cs",
@@ -752,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "PlayerState_Dash.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Dash.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Dash.cs",
@@ -764,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "PlayerState_FreeFall.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_FreeFall.cs",
@@ -776,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "PlayerState_Jump.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Jump.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Jump.cs",
@@ -788,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "PlayerState_Move.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Move.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Move.cs",
@@ -800,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "PlayerState_Idle.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\PlayerState_Idle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerState_Idle.cs",
@@ -812,7 +834,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "BaseAbility.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\BaseAbility.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\BaseAbility.cs",
@@ -824,7 +846,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "HFSM_BaseState.cs",
               "DocumentMoniker": "E:\\UnityProject\\documents GitHub\\LastBiya\\LastBiya\\Assets\\Scripts\\Player\\HFSM_BaseState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\HFSM_BaseState.cs",

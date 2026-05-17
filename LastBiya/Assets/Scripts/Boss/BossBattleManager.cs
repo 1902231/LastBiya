@@ -184,6 +184,23 @@ public class BossBattleManager : MonoBehaviour
     {
         DebugLog("[Boss 战] 战斗开始");
         
+        // 查找玩家并传递给 Boss
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            // 如果 Boss 是 Boss01 类型，传递玩家引用
+            if (currentBoss is Boss01 boss01)
+            {
+                boss01.SetPlayer(player.transform);
+            }
+            
+            DebugLog($"[Boss 战] 玩家引用已传递给 Boss");
+        }
+        else
+        {
+            Debug.LogError("[Boss 战] 无法找到玩家！请确保玩家有 'Player' Tag");
+        }
+        
         // 启动 Boss 战斗逻辑
         currentBoss.StartCombat();
         

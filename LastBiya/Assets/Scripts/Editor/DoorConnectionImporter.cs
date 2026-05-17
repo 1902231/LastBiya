@@ -6,7 +6,7 @@ using System;
 
 public class DoorConnectionImporter : EditorWindow
 {
-    private string csvPath = "Assets/Data/DoorConnections.csv";
+    private string csvPath = "Assets/Data/DoorConnectoionTableCSV/DoorConnectionTableCSV.csv";
     private string tablePath = "Assets/Data So/DoorConnectionTable.asset";
     private DoorConnectionsTableSO targetTable;
 

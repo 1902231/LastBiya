@@ -152,7 +152,7 @@ public class SceneLoader : MonoBehaviour
             yield return currentLoadedScene.sceneReference.UnLoadScene();
         }
 
-        playerTransform.gameObject.SetActive(false);
+       //playerTransform.gameObject.SetActive(false);
 
         LoadNewScene();
     }
@@ -240,11 +240,11 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
-            Debug.Log($"✅ 找到目标门位置，玩家出生在：{finalPosition}");
+            Debug.Log($"找到目标门位置，玩家出生在：{finalPosition}");
         }
 
         playerTransform.position = finalPosition;
-        playerTransform.gameObject.SetActive(true);
+        //playerTransform.gameObject.SetActive(true);
 
         if (fadeScreen)
         {
