@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c28402d60d1fdc4b826b18bb552f55f, type: 3}
+  m_Name: TestScene_3
+  m_EditorClassIdentifier: 
+  roomID: Room_03
+  sceneReference:
+    m_AssetGUID: 0c3f7f4bd1d18f245b9f3b2665a08fca
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  sceneType: 1
+  doors:
+  - doorID: Left_01
+    direction: 0
